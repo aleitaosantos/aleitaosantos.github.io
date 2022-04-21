@@ -329,7 +329,7 @@ h3 {
     flex-direction: column;
     z-index: 20;
     background-color: white;
-    /* visibility: hidden;     */
+    visibility: hidden;    
 }
 
 .loader-polyline {
