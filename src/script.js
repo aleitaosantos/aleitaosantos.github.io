@@ -111,12 +111,12 @@ const labels = {}
 const labelsArr = []
 const labelsContent = []
 labels.content0 = {}
-labels.content1 = { en: 'About', fr: 'Sur Moi', pt: 'Sobre Mim' }
-labels.content2 = { en: 'Skills', fr: 'Mes compétences', pt: 'Minhas competências' }
-labels.content3 = { en: 'Experience', fr: 'Portefeuille d’Architecture', pt: 'Portfolio de Arquitetura' }
+labels.content1 = { en: 'About Me', fr: 'Sur Moi', pt: 'Sobre Mim' }
+labels.content2 = { en: 'Skills', fr: 'Compétences', pt: 'Competências' }
+labels.content3 = { en: 'Experience', fr: 'Expérience', pt: 'Experiência' }
 labels.content4 = { en: 'Education', fr: 'Éducation', pt: 'Educação' }
-labels.content5 = { en: 'Projects', fr: 'Portefeuille de Dev Web', pt: 'Portfolio de Web Dev' }
-labels.content6 = { en: 'Contact', fr: 'Contactez Moi', pt: 'Contate-me' }
+labels.content5 = { en: 'Projects', fr: 'Projets', pt: 'Projetos' }
+labels.content6 = { en: 'Contact', fr: 'Contact', pt: 'Contato' }
 for(let i = 0; i < 7; i++){
     labels['div' + i] = document.createElement('div')
     labels['div' + i].className = 'sphere-label'
@@ -204,9 +204,9 @@ window.addEventListener('mousemove', (event) => {
 
 window.addEventListener('mousemove', () => {
     if(currentIntersect && !isCuboctaOpen) {
-        canvas.style.cursor = "pointer"
+        canvas.style.cursor = 'pointer'
     } else {
-        canvas.style.cursor = "initial"
+        canvas.style.cursor = 'initial'
     }
 })
 
@@ -288,9 +288,34 @@ window.addEventListener('dblclick', () => {
     }
 })
 
+// Sphere Labels Hover Effect
+for(let i = 1; i < 7; i++) {
+    labels['div' + i].addEventListener('mouseenter', () => {
+        if(isCuboctaOpen) {
+            gsap.to(`#sphereLabel${i}`, {
+                opacity: 1,
+                duration: 0.25,
+                fontSize: '1.25em',
+                ease: 'power3.out'             
+            })
+            canvas.style.cursor = 'pointer'
+        }
+    })
+    labels['div' + i].addEventListener('mouseleave', () => {
+        if(isCuboctaOpen) {
+            gsap.to(`#sphereLabel${i}`, {
+                opacity: 0.25,
+                duration: 0.25,
+                fontSize: '1em',
+                ease: 'power3.in' 
+            })
+            canvas.style.cursor = 'initial'
+        }
+    })
+}
 // Box Opener ==> Add && !isBoxOpen
 
-for(let i = 1; i < 7; i++) {
+for(let i = 1; i < 7; i++) {    
     labels['div' + i].addEventListener('click', () => {
         document.querySelector('.box').style.visibility = "visible"
         document.querySelector('.scroll').scrollTo(0,0)
@@ -374,7 +399,10 @@ document.querySelector('.closer').addEventListener('click', () => {
 function changeIdiom(id) {
     idiom = id
     document.documentElement.setAttribute("lang", id)
-    document.querySelector('#boxContent').innerHTML = (boxContent['cont' + activeBox])[idiom] 
+    document.querySelector('#boxContent').innerHTML = (boxContent['cont' + activeBox])[idiom]
+    document.querySelector('#helloWorld').innerHTML = boxContent.helloWorld[idiom] 
+    document.querySelector('#iDo').innerHTML = boxContent.iDo[idiom] 
+    document.querySelector('#presentation').innerHTML = boxContent.presentation[idiom] 
     for(let i = 0; i < 7; i++){
         labels['div' + i].textContent = (labelsContent[i])[idiom]
     }

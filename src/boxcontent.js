@@ -8,12 +8,26 @@
 
 // Declaration
 const boxContent = {}
+boxContent.helloWorld = {}
+boxContent.iDo = {}
+boxContent.presentation = {}
 boxContent.cont1 = {}
 boxContent.cont2 = {}
 boxContent.cont3 = {}
 boxContent.cont4 = {}
 boxContent.cont5 = {}
 boxContent.cont6 = {}
+
+// Main
+boxContent.helloWorld.en = `Hello, World, my name is`
+boxContent.helloWorld.fr = `Bonjour, Monde, je m'appelle`
+boxContent.helloWorld.pt = `Olá, Mundo, meu nome é`
+boxContent.iDo.en = `I build things for the web.`
+boxContent.iDo.fr = `Je construis des choses pour le web.`
+boxContent.iDo.pt = `Eu construo coisas para a web.`
+boxContent.presentation.en = `I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.`
+boxContent.presentation.fr = `Je suis un ingénieur logiciel spécialisé dans la création (et parfois la conception) d'expériences numériques exceptionnelles. Actuellement, je me concentre sur la création de produits accessibles et centrés sur l'humain chez Upstatement.`
+boxContent.presentation.pt = `Sou um engenheiro de software especializado em construir (e ocasionalmente projetar) experiências digitais excepcionais. Atualmente, estou focado na construção de produtos acessíveis e centrados no ser humano na Upstatement.`
 
 // Content Box 1
 boxContent.cont1.en = `
