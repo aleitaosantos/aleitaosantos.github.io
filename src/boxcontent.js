@@ -31,7 +31,12 @@ boxContent.presentation.pt = `Sou um engenheiro de software especializado em con
 
 // Content Box 1
 boxContent.cont1.en = `
-<h2 id="boxTitle">Lorem ipsum English</h2>
+<h2 id="boxTitle">About Me</h2>
+<h3>Degrees</h3>
+<div class="title-flex">
+  <h3>Master of Science</h3>
+  <img class="portrait" src="portrait.png" alt="Alexandre's portrait" />
+</div>
 <p>
 With 509 votes to 3 and 47 abstentions, the European Parliament adopted on Thursday a resolution recalling various measures necessary to protect children and young people fleeing violence and facilitate their integration into host country communities.
 “Every child has the right to be protected from violence, exploitation and abuse”, say MEPs, calling on EU countries to protect children from the risk of trafficking, illegal adoption and other types of abuse.

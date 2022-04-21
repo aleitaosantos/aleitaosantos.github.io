@@ -7,6 +7,13 @@ html, body {
     overflow: hidden;
 }
 
+img {
+    color: #669;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    font-size: 0.75em;
+}
+
 a {
     display: inline-block;
     color: #669;
@@ -197,6 +204,13 @@ h3 {
     justify-content: space-between;
 }
 
+.portrait {
+    height: 135px;
+    width: 135px;
+    border-radius: 50%;
+    box-shadow: #6666991a 0px 5px 10px 0px, #6666991a 0px 0px 0px 1px;
+}
+
 .social-icons-box{
     display: flex;
     justify-content: space-between;
@@ -235,8 +249,12 @@ h3 {
     transition: background-color 0.1s;
 }
 
+#backToBoxTop i {
+    transition: transform 0.5s;
+}
+
 #backToBoxTop i:hover {
-    text-shadow: 0 0 2px #6696;
+    transform: translateY(-0.25em);
     cursor: pointer
 }
 
