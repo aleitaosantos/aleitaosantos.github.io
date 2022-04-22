@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import { boxContent } from './boxcontent.js'
 import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRenderer.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import textChanger from '.textchanger.js'
 
 
 // Init Declarations
