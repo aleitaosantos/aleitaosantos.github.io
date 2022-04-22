@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import { boxContent } from './boxcontent.js'
 import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRenderer.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-import textChanger from '.textchanger.js'
+import { textChanger } from './textchanger.js'
 
 
 // Init Declarations
@@ -16,7 +16,7 @@ const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
 }
-console.log(window.innerWidth, window.innerHeight)
+console.log(window.innerWidth, window.innerHeight) 
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -397,15 +397,22 @@ document.querySelector('.closer').addEventListener('click', () => {
 })
 
 // Idiom Changer
+
+async function changeIdiomFancy(id) {  
+    await textChanger(boxContent.helloWorld[id], document.querySelector('#helloWorld'), 25)
+    await textChanger(boxContent.iDo[id], document.querySelector('#iDo'), 50)
+    await textChanger(boxContent.presentation[id], document.querySelector('#presentation'), 10)    
+    for (let i = 1; i < 7; i++) {
+        await textChanger((labels['content' + i])[id], document.querySelector(`#sphereLabel${i}`), 50)
+    }   
+}
+
 function changeIdiom(id) {
-    idiom = id
-    document.documentElement.setAttribute("lang", id)
-    document.querySelector('#boxContent').innerHTML = (boxContent['cont' + activeBox])[idiom]
-    document.querySelector('#helloWorld').innerHTML = boxContent.helloWorld[idiom] 
-    document.querySelector('#iDo').innerHTML = boxContent.iDo[idiom] 
-    document.querySelector('#presentation').innerHTML = boxContent.presentation[idiom] 
-    for(let i = 0; i < 7; i++){
-        labels['div' + i].textContent = (labelsContent[i])[idiom]
+    if (idiom !== id) {
+        idiom = id
+        document.documentElement.setAttribute("lang", id)
+        document.querySelector('#boxContent').innerHTML = (boxContent['cont' + activeBox])[idiom]
+        changeIdiomFancy(id)
     }
 }
 document.querySelectorAll('.en-changer').forEach((node) => {
