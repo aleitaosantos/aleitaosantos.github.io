@@ -1,5 +1,5 @@
 function textChanger(newString, span, interval) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
         
     // create arrays from strings
     const oldString = span.innerText

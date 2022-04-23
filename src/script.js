@@ -8,8 +8,8 @@ import { textChanger } from './textchanger.js'
 
 
 // Init Declarations
-let currentIntersect, isCuboctaOpen, areTetrasMoving, isBoxOpen, mixer
-let idiom = 'en', activeBox = 1
+let currentIntersect, isCuboctaOpen, areTetrasMoving, isBoxOpen, mixer, idiom
+let activeBox = 1
 
 // Sizes
 const sizes = {
@@ -228,13 +228,11 @@ window.addEventListener('click', () => {
             labelsArr.forEach((label) => {
                 label.visible = true
             })            
-            gsap.fromTo('.sphere-label', {
-                opacity: 0
-            }, {
-                opacity: 0.25,
-                delay: 0.5,
-                duration: 1.5                
-            })
+            setTimeout(() => {setMainText()}, 1000)
+            setTimeout(() => {
+                document.querySelector('#mainIdiomChangers').style.visibility = 'visible'
+                document.querySelector('.social-icons-box').style.visibility = 'visible'                
+            }, 7500)
             
             isCuboctaOpen = true
             canvas.style.cursor = "initial"
@@ -250,6 +248,7 @@ window.addEventListener('click', () => {
 window.addEventListener('dblclick', () => {
     if(currentIntersect) {
         if(isCuboctaOpen && !isBoxOpen) {
+            unsetMainText()
             helpersArr.forEach((helper) => {
                 helper.position.x = 0
                 helper.position.y = 0
@@ -261,19 +260,12 @@ window.addEventListener('dblclick', () => {
                 gsap.to(cuboctaArr[i].position, {z: 0, duration: 5, ease: 'power3'})
             }   
             gsap.to(camera, {fov: 60, zoom: 1, duration: 5, onUpdate: () => {camera.updateProjectionMatrix()}})
-            
-            gsap.to('.sphere-label', {
-                opacity: 0,
-                duration: 0,
-                onComplete: () => {
-                    labelsArr.forEach((label) => {
-                        label.visible = false
-                    })
-                    document.querySelector('.main').style.visibility = 'hidden'
-                }
-            })
-                
-
+                 
+            document.querySelector('#mainIdiomChangers').style.visibility = 'hidden'
+            document.querySelector('.social-icons-box').style.visibility = 'hidden'
+            labelsArr.forEach((label) => {
+                label.visible = false
+            })      
             areTetrasMoving = true
             setTimeout(() => {
                 isCuboctaOpen = false
@@ -289,33 +281,7 @@ window.addEventListener('dblclick', () => {
     }
 })
 
-// Sphere Labels Hover Effect
-for(let i = 1; i < 7; i++) {
-    labels['div' + i].addEventListener('mouseenter', () => {
-        if(isCuboctaOpen) {
-            gsap.to(`#sphereLabel${i}`, {
-                opacity: 1,
-                duration: 0.25,
-                fontSize: '1.25em',
-                ease: 'power3.out'             
-            })
-            canvas.style.cursor = 'pointer'
-        }
-    })
-    labels['div' + i].addEventListener('mouseleave', () => {
-        if(isCuboctaOpen) {
-            gsap.to(`#sphereLabel${i}`, {
-                opacity: 0.25,
-                duration: 0.25,
-                fontSize: '1em',
-                ease: 'power3.in' 
-            })
-            canvas.style.cursor = 'initial'
-        }
-    })
-}
 // Box Opener ==> Add && !isBoxOpen
-
 for(let i = 1; i < 7; i++) {    
     labels['div' + i].addEventListener('click', () => {
         document.querySelector('.box').style.visibility = "visible"
@@ -396,8 +362,29 @@ document.querySelector('.closer').addEventListener('click', () => {
     })
 })
 
-// Idiom Changer
+// set/unset Main Text
+async function setMainText() {
+    await textChanger(boxContent.helloWorld.en, document.querySelector('#helloWorld'), 20)
+    await textChanger('Alexandre Leitão Santos.', document.querySelector('#myName'), 40)
+    await textChanger(boxContent.iDo.en, document.querySelector('#iDo'), 30)
+    await textChanger(boxContent.presentation.en, document.querySelector('#presentation'), 10)    
+    for (let i = 1; i < 7; i++) {
+        await textChanger((labels['content' + i]).en, document.querySelector(`#sphereLabel${i}`), 50)
+    }
+    idiom = 'en'
+}
+async function unsetMainText() {
+    await textChanger('', document.querySelector('#helloWorld'), 20)
+    await textChanger('', document.querySelector('#myName'), 40)
+    await textChanger('', document.querySelector('#iDo'), 30)
+    await textChanger('', document.querySelector('#presentation'), 10)    
+    for (let i = 1; i < 7; i++) {
+        await textChanger('', document.querySelector(`#sphereLabel${i}`), 50)
+    }
+    idiom = undefined
+}
 
+// Idiom Changer
 async function changeIdiomFancy(id) {  
     await textChanger(boxContent.helloWorld[id], document.querySelector('#helloWorld'), 25)
     await textChanger(boxContent.iDo[id], document.querySelector('#iDo'), 50)

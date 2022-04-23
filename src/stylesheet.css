@@ -69,7 +69,7 @@ h3 {
     color: #669;
     display: flex;
     align-items: stretch;
-    visibility: hidden;   
+    visibility: visible;   
 }
 
 .main h1{
@@ -107,6 +107,10 @@ h3 {
     box-shadow: #6666991a 0px 5px 10px 0px, #6666991a 0px 0px 0px 1px;
     z-index: 11;
     visibility: hidden;       
+}
+
+#mainIdiomChangers {
+    visibility: hidden;
 }
 
 .container {
@@ -183,6 +187,8 @@ h3 {
 }
 
 .sphere-label:hover {
+    opacity: 1;
+    font-size: 1.25em;
     cursor: pointer;    
 }
 
@@ -195,7 +201,7 @@ h3 {
     position: absolute;
     top: 80px;
     left: 40px;
-    width: 30vw;
+    width: 31vw;
 }
 
 .title-flex {
@@ -221,7 +227,8 @@ h3 {
     font-family: 'Roboto Mono', monospace;
     bottom: 40px;
     right: 40px;
-    z-index: 10;    
+    z-index: 10;  
+    visibility: hidden;  
 }
 
 .social-icons{
