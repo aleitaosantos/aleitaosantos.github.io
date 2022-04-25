@@ -22,12 +22,12 @@ boxContent.cont6 = {}
 boxContent.helloWorld.en = `Hello, World, my name is`
 boxContent.helloWorld.fr = `Bonjour, Monde, je m'appelle`
 boxContent.helloWorld.pt = `Olá, Mundo, meu nome é`
-boxContent.iDo.en = `I build things for the web.`
-boxContent.iDo.fr = `Je construis des choses pour le web.`
-boxContent.iDo.pt = `Eu construo coisas para a web.`
-boxContent.presentation.en = `I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.`
-boxContent.presentation.fr = `Je suis un ingénieur logiciel spécialisé dans la création (et parfois la conception) d'expériences numériques exceptionnelles. Actuellement, je me concentre sur la création de produits accessibles et centrés sur l'humain chez Upstatement.`
-boxContent.presentation.pt = `Sou um engenheiro de software especializado em construir (e ocasionalmente projetar) experiências digitais excepcionais. Atualmente, estou focado na construção de produtos acessíveis e centrados no ser humano na Upstatement.`
+boxContent.iDo.en = `Front-End Developer`
+boxContent.iDo.fr = `Front-End Développeur`
+boxContent.iDo.pt = `Desenvolvedor Front-End`
+boxContent.presentation.en = `I'm an architect with over a decade of experience who chose to build things for the web. Passionate about graphic design, 3D modeling, product development and computer programming.`
+boxContent.presentation.fr = `Je suis un architecte avec plus d'une décennie d'expérience qui a choisi de construire des choses pour le web. Passionné par le graphisme, la modélisation 3D, le développement de produits et la programmation informatique.`
+boxContent.presentation.pt = `Sou um arquiteto com mais de uma década de experiência que optou por construir coisas para a web. Apaixonado por design gráfico, modelagem 3D, desenvolvimento de produtos e programação de computadores.`
 
 // Content Box 1
 boxContent.cont1.en = `
@@ -71,7 +71,7 @@ Os eurodeputados apelam aos Estados-Membros da UE para que utilizem da melhor fo
 // Content Box 2
 boxContent.cont2.en = `
 <h2 id="boxTitle">My Skills</h2>
-<h3>.Coding Languages</h3>
+<h3>Coding Languages</h3>
 <p>
   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium libero illo, id
   distinctio omnis facere cupiditate reiciendis aut, natus inventore porro ad ullam
@@ -112,7 +112,7 @@ boxContent.cont2.en = `
     </div>
   </div>
 </div>
-<h3>.Dev Resources</h3>
+<h3>Dev Resources</h3>
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium libero illo, id distinctio omnis facere cupiditate reiciendis aut, natus inventore porro ad ullam explicabo nihil quos veniam. Laudantium, quos voluptatem?</p>
 <div class="percent-container">
   <div class="percent-box">
@@ -215,7 +215,7 @@ boxContent.cont2.en = `
     </div>
   </div>
 </div>
-<h3>.Design Tools</h3>
+<h3>Design Tools</h3>
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium libero illo, id distinctio omnis facere cupiditate reiciendis aut, natus inventore porro ad ullam explicabo nihil quos veniam. Laudantium, quos voluptatem?</p>
 <div class="percent-container">
   <div class="percent-box">
@@ -287,7 +287,7 @@ boxContent.cont2.en = `
     </div>
   </div>
 </div>
-<h3>.Drafting and 3D Modeling</h3>
+<h3>Drafting and 3D Modeling</h3>
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium libero illo, id distinctio omnis facere cupiditate reiciendis aut, natus inventore porro ad ullam explicabo nihil quos veniam. Laudantium, quos voluptatem?</p>
 <div class="percent-container">
   <div class="percent-box">
@@ -359,7 +359,7 @@ boxContent.cont2.en = `
     </div>
   </div>
 </div>
-<h3>.Productivity Resources</h3>
+<h3>Productivity Resources</h3>
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium libero illo, id distinctio omnis facere cupiditate reiciendis aut, natus inventore porro ad ullam explicabo nihil quos veniam. Laudantium, quos voluptatem?</p>
 <div class="percent-container">
   <div class="percent-box">
@@ -411,9 +411,9 @@ boxContent.cont4.en = `
 <h2 id="boxTitle">Education</h2>
 </header>
 <section>
-  <h3>.Degrees</h3>
+  <h3>Degrees</h3>
   <div class="title-flex">
-    <h3>Master of Science</h3>
+    <h4>Master of Science</h4>
     <p>mar 2011 - may 2014</p>
   </div>
   <p>
@@ -424,7 +424,7 @@ boxContent.cont4.en = `
     <a target="_blank" rel="external" href="https://teses.usp.br/teses/disponiveis/102/102132/tde-20012015-093731/en.php">Useful landscape: Tietê River and São Paulo urbanization (1966-1986) <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
   </p>
   <div class="title-flex">
-    <h3>Architecture and Urbanism</h3>
+    <h4>Architecture and Urbanism</h4>
     <p>feb 2004 - dec 2009</p>
   </div>
   <p>
@@ -436,65 +436,65 @@ boxContent.cont4.en = `
   </p>
 </section>
 <section>
-  <h3>.Courses</h3>
+  <h3>Courses</h3>
   <div class="title-flex">
-    <h3>Three.js Journey</h3>
+    <h4>Three.js Journey</h4>
     <p>2022</p>
   </div>
   <p>
     <a target="_blank" rel="external" href="https://threejs-journey.com/">Bruno Simon <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
   </p>
   <div class="title-flex">
-    <h3>Git & Github Bootcamp</h3>
+    <h4>Git & Github Bootcamp</h4>
     <p>2022</p>
   </div>
   <p>
     <a target="_blank" rel="external" href="https://www.udemy.com/course/git-and-github-bootcamp/">Udemy / Colt Steele <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
   </p>
   <div class="title-flex">
-    <h3>Modern React Bootcamp</h3>
+    <h4>Modern React Bootcamp</h4>
     <p>2021</p>
   </div>
   <p>
     <a target="_blank" rel="external" href="https://www.udemy.com/course/modern-react-bootcamp/">Udemy / Colt Steele <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
   </p>
   <div class="title-flex">
-    <h3>Web Developer Bootcamp</h3>
+    <h4>Web Developer Bootcamp</h4>
     <p>2021</p>
   </div>
   <p>
     <a target="_blank" rel="external" href="https://www.udemy.com/course/the-web-developer-bootcamp/">Udemy / Colt Steele <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
   </p>
   <div class="title-flex">
-    <h3>Digital Product Design (UX & UI)</h3>
+    <h4>Digital Product Design (UX & UI)</h4>
     <p>2021</p>
   </div>
   <p>
     <a target="_blank" rel="external" href="https://www.udemy.com/course/master-digital-product-design-ux-research-ui-design/">Udemy / Rob Sutcliffe <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
   </p>
   <div class="title-flex">
-    <h3>Management for Design Offices</h3>
+    <h4>Management for Design Offices</h4>
     <p>2014</p>
   </div>
   <p>
     <a target="_blank" rel="external" href="https://www.senac.br/">Senac <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
   </p>
   <div class="title-flex">
-    <h3>Revit Architecture</h3>
+    <h4>Revit Architecture</h4>
     <p>2012</p>
   </div>
   <p>
     <a target="_blank" rel="external" href="https://drc.org.br/">DRC Training and Consulting <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
   </p>
   <div class="title-flex">
-    <h3>V-Ray</h3>
+    <h4>V-Ray</h4>
     <p>2010</p>
   </div>
   <p>
     <a target="_blank" rel="external" href="https://www.cadritech.com.br/">Cadritech <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
   </p>
   <div class="title-flex">
-    <h3>Digital 3D Modeling</h3>
+    <h4>Digital 3D Modeling</h4>
     <p>2010</p>
   </div>
   <p>

@@ -58,6 +58,19 @@ h3 {
     padding-bottom: 1em;
 }
 
+h3::before {
+    content: ".";
+}
+
+h4 {
+    color: #669;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    font-size: 1em;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
 .webgl {
     position: fixed;
     top: 0;
@@ -86,6 +99,7 @@ h3 {
     font-weight: 600;
     line-height: 0.875em;
     padding: 0.75em 0 0.75em 0;
+    opacity: 0.75;
 }
 
 .main p{
@@ -407,6 +421,8 @@ h3 {
         stroke-dashoffset: -3534;
     }
 }
+
+
 
 ::-moz-selection { /* Code for Firefox */
     color: #669;
