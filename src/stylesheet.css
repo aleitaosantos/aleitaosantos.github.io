@@ -4,7 +4,14 @@
 }
 
 html, body {
-    overflow: hidden;
+    overflow: hidden;    
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
 }
 
 img {
@@ -69,13 +76,6 @@ h4 {
     font-size: 1em;
     padding-top: 2em;
     padding-bottom: 1em;
-}
-
-.webgl {
-    position: fixed;
-    top: 0;
-    left: 0;
-    outline: none;
 }
 
 .main {
@@ -258,7 +258,7 @@ h4 {
 }
 
 .social-icons i{
-    color: #fff;
+    color: #fff;    
 }
 
 .social-icons:hover {
@@ -283,6 +283,7 @@ h4 {
     max-width: 480px;
     display: flex;
     flex-wrap: wrap;    
+    justify-content: center;
 }
 
 .percent-box {
@@ -372,8 +373,8 @@ h4 {
 }
 
 .loader-box {
-    width: 640px;
-    height: 640px;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -448,4 +449,18 @@ background: #669;
 
 :root {
     --anim: 1
+}
+
+@media only screen and (max-width : 800px) {
+    .box {        
+        width: 90vw;        
+    }
+    
+    .container {
+        padding: 20px 20px 20px 40px;   
+    }
+    
+    .scroll {
+        padding-right: 18px;
+    }
 }

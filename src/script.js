@@ -8,7 +8,7 @@ import { textChanger } from './textchanger.js'
 
 
 // Init Declarations
-let currentIntersect, isCuboctaOpen, areTetrasMoving, isBoxOpen, mixer, idiom
+let currentIntersect, isCuboctaOpen, areTetrasMoving, isBoxOpen, mixer, idiom, boxWidth
 let activeBox = 1
 
 // Sizes
@@ -16,10 +16,13 @@ const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
 }
-console.log(window.innerWidth, window.innerHeight) 
+console.log(sizes.width, sizes.height)
+console.log(window.innerWidth, window.innerHeight)
+console.log(document.documentElement.clientWidth, document.documentElement.clientHeight)
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
+console.log(canvas.width, canvas.height)
 
 // Scene
 const scene = new THREE.Scene()
@@ -181,7 +184,7 @@ scene.add(pointLight)
 // CSS 2D Renderer
 const css2DRenderer = new CSS2DRenderer()
 document.body.appendChild(css2DRenderer.domElement)
-css2DRenderer.setSize(window.innerWidth, window.innerHeight)
+css2DRenderer.setSize(sizes.width, sizes.height)
 
 // WebGL Renderer
 const webGLRenderer = new THREE.WebGLRenderer({
@@ -284,6 +287,11 @@ window.addEventListener('dblclick', () => {
 // Box Opener ==> Add && !isBoxOpen
 for(let i = 1; i < 7; i++) {    
     labels['div' + i].addEventListener('click', () => {
+        if (sizes.width > 800) {
+            boxWidth = '640px'
+        } else {
+            boxWidth = '90vw'
+        }
         document.querySelector('.box').style.visibility = "visible"
         document.querySelector('.scroll').scrollTo(0,0)
         document.querySelector('#boxContent').innerHTML = (boxContent['cont' + i])[idiom]
@@ -297,7 +305,7 @@ for(let i = 1; i < 7; i++) {
         gsap.fromTo('.box', {
             width: 0
         }, {
-            width: '640px',
+            width: boxWidth,
             duration: 1,
             ease: 'power3.out'
         })
@@ -420,12 +428,12 @@ document.querySelector('#backToBoxTop').addEventListener('click', () => {
 // Window Resize Updater
 window.addEventListener('resize', () => {
     sizes.width = window.innerWidth
-    sizes.height = window.innerHeight
+    sizes.height = window.innerHeight    
     camera.aspect = sizes.width / sizes.height
     camera.updateProjectionMatrix()
+    webGLRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))    
     css2DRenderer.setSize(sizes.width, sizes.height)
     webGLRenderer.setSize(sizes.width, sizes.height)
-    webGLRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))    
 })
 
 
