@@ -364,6 +364,7 @@ document.querySelector('.closer').addEventListener('click', () => {
 
 // set/unset Main Text
 async function setMainText() {
+    idiom = 'en'
     await textChanger(boxContent.helloWorld.en, document.querySelector('#helloWorld'), 20)
     await textChanger('Alexandre Leitão Santos.', document.querySelector('#myName'), 40)
     await textChanger(boxContent.iDo.en, document.querySelector('#iDo'), 30)
@@ -371,7 +372,6 @@ async function setMainText() {
     for (let i = 1; i < 7; i++) {
         await textChanger((labels['content' + i]).en, document.querySelector(`#sphereLabel${i}`), 50)
     }
-    idiom = 'en'
 }
 async function unsetMainText() {
     await textChanger('', document.querySelector('#helloWorld'), 20)
@@ -379,7 +379,7 @@ async function unsetMainText() {
     await textChanger('', document.querySelector('#iDo'), 30)
     await textChanger('', document.querySelector('#presentation'), 10)    
     for (let i = 1; i < 7; i++) {
-        await textChanger('', document.querySelector(`#sphereLabel${i}`), 50)
+        await textChanger('', document.querySelector(`#sphereLabel${i}`), 0)
     }
     idiom = undefined
 }
