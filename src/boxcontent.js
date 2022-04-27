@@ -71,13 +71,77 @@ Os eurodeputados apelam aos Estados-Membros da UE para que utilizem da melhor fo
 // Content Box 2
 boxContent.cont2.en = `
 <header>
-<h2>My Skills</h2>
+<h2>Skills</h2>
 </header>
+<section>
 <h3>Coding Languages</h3>
 <p>
-  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium libero illo, id
-  distinctio omnis facere cupiditate reiciendis aut, natus inventore porro ad ullam
-  explicabo nihil quos veniam. Laudantium, quos voluptatem?
+  I learned most of these languages from real needs, through self-learning with the
+  help of courses or books and immediately putting the acquired knowledge into
+  practice. My goal is to know the basis of as many languages as possible while
+  deepening the knowledge of the most necessary ones.
+</p>
+<div class="percent-container">
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">CSS</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">HTML</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">JavaScript</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc040">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">PHP</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc020">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Python</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc020">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">TypeScript</div>
+    </div>
+  </div>
+</div>
+<h3>Dev Resources</h3>
+<p>
+  I try to get to know what the mainstream requires, focusing on the most modern, but
+  I also intend to learn less used resources, but with a strong capacity to help in my
+  projects.
 </p>
 <div class="percent-container">
   <div class="percent-box">
@@ -86,20 +150,7 @@ boxContent.cont2.en = `
         <circle cx="50" cy="50" r="50"></circle>
         <circle cx="50" cy="50" r="50"></circle>
       </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" >HTML</a>
-      </div>
-    </div>
-  </div>
-  <div class="percent-box">
-    <div class="percent">
-      <svg class="perc080">
-        <circle cx="50" cy="50" r="50"></circle>
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="https://en.wikipedia.org/wiki/CSS">CSS</a>
-      </div>
+      <div class="perc-label">Bootstrap</div>
     </div>
   </div>
   <div class="percent-box">
@@ -108,35 +159,16 @@ boxContent.cont2.en = `
         <circle cx="50" cy="50" r="50"></circle>
         <circle cx="50" cy="50" r="50"></circle>
       </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" title="JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. (MDN)">JavaScript</a>
-      </div>
-    </div>
-  </div>
-</div>
-<h3>Dev Resources</h3>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium libero illo, id distinctio omnis facere cupiditate reiciendis aut, natus inventore porro ad ullam explicabo nihil quos veniam. Laudantium, quos voluptatem?</p>
-<div class="percent-container">
-  <div class="percent-box">
-    <div class="percent">
-      <svg class="perc000">
-        <circle cx="50" cy="50" r="50"></circle>
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="https://getbootstrap.com/">Bootstrap</a>
-      </div>
+      <div class="perc-label">Bulma</div>
     </div>
   </div>
   <div class="percent-box">
     <div class="percent">
-      <svg class="perc020">
+      <svg class="perc060">
         <circle cx="50" cy="50" r="50"></circle>
         <circle cx="50" cy="50" r="50"></circle>
       </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="https://bulma.io/">Bulma</a>
-      </div>
+      <div class="perc-label">Git / Github</div>
     </div>
   </div>
   <div class="percent-box">
@@ -145,64 +177,7 @@ boxContent.cont2.en = `
         <circle cx="50" cy="50" r="50"></circle>
         <circle cx="50" cy="50" r="50"></circle>
       </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">Git</a>
-      </div>
-    </div>
-  </div>
-  <div class="percent-box">
-    <div class="percent">
-      <svg class="perc060">
-        <circle cx="50" cy="50" r="50"></circle>
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">JQuery</a>
-      </div>
-    </div>
-  </div>
-  <div class="percent-box">
-    <div class="percent">
-      <svg class="perc080">
-        <circle cx="50" cy="50" r="50"></circle>
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">MongoDB</a>
-      </div>
-    </div>
-  </div>
-  <div class="percent-box">
-    <div class="percent">
-      <svg class="perc100">
-        <circle cx="50" cy="50" r="50"></circle>
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">Node.js</a>
-      </div>
-    </div>
-  </div>
-  <div class="percent-box">
-    <div class="percent">
-      <svg class="perc080">
-        <circle cx="50" cy="50" r="50"></circle>
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">React</a>
-      </div>
-    </div>
-  </div>
-  <div class="percent-box">
-    <div class="percent">
-      <svg class="perc060">
-        <circle cx="50" cy="50" r="50"></circle>
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">Three.js</a>
-      </div>
+      <div class="perc-label">JQuery</div>
     </div>
   </div>
   <div class="percent-box">
@@ -211,59 +186,60 @@ boxContent.cont2.en = `
         <circle cx="50" cy="50" r="50"></circle>
         <circle cx="50" cy="50" r="50"></circle>
       </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">Wordpress</a>
-      </div>
+      <div class="perc-label">MongoDB</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Node.js</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">React</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Three.js</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc040">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Wordpress</div>
     </div>
   </div>
 </div>
 <h3>Design Tools</h3>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium libero illo, id distinctio omnis facere cupiditate reiciendis aut, natus inventore porro ad ullam explicabo nihil quos veniam. Laudantium, quos voluptatem?</p>
+<p>
+  This group of competencies goes beyond allowing the possibility of interaction with
+  UX/UI professionals. It's a set of tools that I'm very familiar with from very early
+  on in my career.
+</p>
 <div class="percent-container">
-  <div class="percent-box">
-    <div class="percent">
-      <svg class="perc000">
-        <circle cx="50" cy="50" r="50"></circle>
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="https://getbootstrap.com/"
-          >Adobe Illustrator</a
-        >
-      </div>
-    </div>
-  </div>
-  <div class="percent-box">
-    <div class="percent">
-      <svg class="perc020">
-        <circle cx="50" cy="50" r="50"></circle>
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="https://bulma.io/">Adobe InDesign</a>
-      </div>
-    </div>
-  </div>
-  <div class="percent-box">
-    <div class="percent">
-      <svg class="perc040">
-        <circle cx="50" cy="50" r="50"></circle>
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">Adobe Photoshop</a>
-      </div>
-    </div>
-  </div>
   <div class="percent-box">
     <div class="percent">
       <svg class="perc060">
         <circle cx="50" cy="50" r="50"></circle>
         <circle cx="50" cy="50" r="50"></circle>
       </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">Adobe XD</a>
-      </div>
+      <div class="perc-label">Adobe Illustrator</div>
     </div>
   </div>
   <div class="percent-box">
@@ -272,25 +248,52 @@ boxContent.cont2.en = `
         <circle cx="50" cy="50" r="50"></circle>
         <circle cx="50" cy="50" r="50"></circle>
       </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">Affinity</a>
-      </div>
+      <div class="perc-label">Adobe InDesign</div>
     </div>
   </div>
   <div class="percent-box">
     <div class="percent">
-      <svg class="perc100">
+      <svg class="perc080">
         <circle cx="50" cy="50" r="50"></circle>
         <circle cx="50" cy="50" r="50"></circle>
       </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">Figma</a>
-      </div>
+      <div class="perc-label">Adobe Photoshop</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Adobe XD</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Affinity</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Figma</div>
     </div>
   </div>
 </div>
 <h3>Drafting and 3D Modeling</h3>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium libero illo, id distinctio omnis facere cupiditate reiciendis aut, natus inventore porro ad ullam explicabo nihil quos veniam. Laudantium, quos voluptatem?</p>
+<p>
+  This set is probably the one I have the most time of experience and high mastery of,
+  as they are tools that have been widely used by me during my career as an architect
+  and professor.
+</p>
 <div class="percent-container">
   <div class="percent-box">
     <div class="percent">
@@ -298,55 +301,7 @@ boxContent.cont2.en = `
         <circle cx="50" cy="50" r="50"></circle>
         <circle cx="50" cy="50" r="50"></circle>
       </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">Adobe Substance 3D</a>
-      </div>
-    </div>
-  </div>
-  <div class="percent-box">
-    <div class="percent">
-      <svg class="perc000">
-        <circle cx="50" cy="50" r="50"></circle>
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="https://getbootstrap.com/"
-          >Autodesk AutoCAD</a
-        >
-      </div>
-    </div>
-  </div>
-  <div class="percent-box">
-    <div class="percent">
-      <svg class="perc020">
-        <circle cx="50" cy="50" r="50"></circle>
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="https://bulma.io/">Autodesk Revit</a>
-      </div>
-    </div>
-  </div>
-  <div class="percent-box">
-    <div class="percent">
-      <svg class="perc040">
-        <circle cx="50" cy="50" r="50"></circle>
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">Blender</a>
-      </div>
-    </div>
-  </div>
-  <div class="percent-box">
-    <div class="percent">
-      <svg class="perc080">
-        <circle cx="50" cy="50" r="50"></circle>
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">Rhinoceros 3D + Grasshopper</a>
-      </div>
+      <div class="perc-label">Adobe Substance 3D</div>
     </div>
   </div>
   <div class="percent-box">
@@ -355,35 +310,120 @@ boxContent.cont2.en = `
         <circle cx="50" cy="50" r="50"></circle>
         <circle cx="50" cy="50" r="50"></circle>
       </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">SketchUp</a>
-      </div>
+      <div class="perc-label">Autodesk AutoCAD</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc100">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Autodesk Revit</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Blender</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Rhinoceros 3D + Grasshopper</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc100">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">SketchUp</div>
     </div>
   </div>
 </div>
 <h3>Productivity Resources</h3>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium libero illo, id distinctio omnis facere cupiditate reiciendis aut, natus inventore porro ad ullam explicabo nihil quos veniam. Laudantium, quos voluptatem?</p>
+<p>
+  Experiences in previous companies put me in contact with resources that I learned to
+  recognize as necessary for the good performance of project teams.
+</p>
 <div class="percent-container">
   <div class="percent-box">
     <div class="percent">
-      <svg class="perc000">
+      <svg class="perc060">
         <circle cx="50" cy="50" r="50"></circle>
         <circle cx="50" cy="50" r="50"></circle>
       </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="https://getbootstrap.com/">Agile/Scrum Methodology</a>
-      </div>
+      <div class="perc-label">Agile/Scrum Methodology</div>
     </div>
   </div>
   <div class="percent-box">
     <div class="percent">
-      <svg class="perc020">
+      <svg class="perc080">
         <circle cx="50" cy="50" r="50"></circle>
         <circle cx="50" cy="50" r="50"></circle>
       </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="https://bulma.io/">Google Workspace</a>
-      </div>
+      <div class="perc-label">Google Workspace</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Microsoft 365</div>
+    </div>
+  </div>
+</div>
+</section>
+`
+boxContent.cont2.fr = `
+<header>
+<h2>Compétences</h2>
+</header>
+<section>
+<h3>Langages de Codage</h3>
+<p>
+  J'ai appris la plupart de ces langues à partir de besoins réels, par
+  auto-apprentissage à l'aide de cours ou de livres et mettant immédiatement en
+  pratique les connaissances acquises. Mon objectif est de connaître les bases d'un
+  maximum de langages tout en approfondissant la connaissance des plus nécessaires.
+</p>
+<div class="percent-container">
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">CSS</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">HTML</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">JavaScript</div>
     </div>
   </div>
   <div class="percent-box">
@@ -392,15 +432,596 @@ boxContent.cont2.en = `
         <circle cx="50" cy="50" r="50"></circle>
         <circle cx="50" cy="50" r="50"></circle>
       </svg>
-      <div class="perc-label">
-        <a target="_blank" rel="help" href="">Microsoft 365</a>
-      </div>
+      <div class="perc-label">PHP</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc020">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Python</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc020">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">TypeScript</div>
     </div>
   </div>
 </div>
+<h3>Ressources de Développement</h3>
+<p>
+  J'essaie d'apprendre à connaître ce que le mainstream exige, en me concentrant sur
+  les plus modernes, mais j'ai également l'intention d'apprendre des ressources moins
+  utilisées, mais avec une forte capacité à aider dans mes projets.
+</p>
+<div class="percent-container">
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Bootstrap</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Bulma</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Git / Github</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc040">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">JQuery</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc040">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">MongoDB</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Node.js</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">React</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Three.js</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc040">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Wordpress</div>
+    </div>
+  </div>
+</div>
+<h3>Outils de Design</h3>
+<p>
+  Ce groupe de compétences va au-delà de la possibilité d'interaction avec des
+  professionnels UX/UI. C'est un ensemble d'outils que je connais très bien depuis le
+  début de ma carrière.
+</p>
+<div class="percent-container">
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Adobe Illustrator</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Adobe InDesign</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Adobe Photoshop</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Adobe XD</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Affinity</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Figma</div>
+    </div>
+  </div>
+</div>
+<h3>Dessin et Modélisation 3D</h3>
+<p>
+  Cet ensemble est probablement celui que j'ai le plus d'expérience et de maîtrise,
+  car ce sont des outils que j'ai largement utilisés au cours de ma carrière
+  d'architecte et de professeur.
+</p>
+<div class="percent-container">
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Adobe Substance 3D</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc100">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Autodesk AutoCAD</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc100">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Autodesk Revit</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Blender</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Rhinoceros 3D + Grasshopper</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc100">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">SketchUp</div>
+    </div>
+  </div>
+</div>
+<h3>Ressources de Productivité</h3>
+<p>
+  Des expériences dans des entreprises précédentes m'ont mis en contact avec des
+  ressources que j'ai appris à reconnaître comme nécessaires au bon fonctionnement des
+  équipes de projet.
+</p>
+<div class="percent-container">
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Méthodologie Agile/Scrum</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Google Workspace</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Microsoft 365</div>
+    </div>
+  </div>
+</div>
+</section>
 `
-boxContent.cont2.fr = ``
-boxContent.cont2.pt = ``
+boxContent.cont2.pt = `
+<header>
+<h2>Competências</h2>
+</header>
+<section>
+<h3>Linguagens de Programação</h3>
+<p>
+  Aprendi a maioria destas linguagens a partir de necessidades reais, através de
+  autoaprendizagem com o auxílio de cursos ou livros e colocando imediatamente em
+  prática os conhecimentos adquiridos. Meu objetivo é conhecer a base de tantas
+  linguagens quanto possível ao mesmo tempo em que aprofundo o conhecimento das mais
+  necessárias.
+</p>
+<div class="percent-container">
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">CSS</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">HTML</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">JavaScript</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc040">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">PHP</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc020">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Python</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc020">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">TypeScript</div>
+    </div>
+  </div>
+</div>
+<h3>Recursos de Desenvolvimento</h3>
+<p>
+  Procuro conhecer bem o que o mainstream exige, com foco no que há de mais moderno,
+  mas também tenciono aprender recursos menos utilizados, porém com forte capacidade
+  de auxiliar nos meus projetos.
+</p>
+<div class="percent-container">
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Bootstrap</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Bulma</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Git / Github</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc040">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">JQuery</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc040">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">MongoDB</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Node.js</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">React</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Three.js</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc040">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Wordpress</div>
+    </div>
+  </div>
+</div>
+<h3>Ferramentas de Design</h3>
+<p>
+  Este grupo de competências vai além de permitir a possibilidade de interação com os
+  profissionais de UX/UI. É um conjunto de ferramentas com o qual tenho imensa
+  familiaridade desde muito cedo na minha carreira.
+</p>
+<div class="percent-container">
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Adobe Illustrator</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Adobe InDesign</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Adobe Photoshop</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Adobe XD</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Affinity</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Figma</div>
+    </div>
+  </div>
+</div>
+<h3>Desenho e Modelagem 3D</h3>
+<p>
+  Este conjunto é, provavelmente, o que eu tenho mais tempo de experiência e alto
+  domínio, já que são ferramentas que foram amplamente utilizadas durante minha
+  carreira como arquiteto e professor.
+</p>
+<div class="percent-container">
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Adobe Substance 3D</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc100">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Autodesk AutoCAD</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc100">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Autodesk Revit</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Blender</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Rhinoceros 3D + Grasshopper</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc100">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">SketchUp</div>
+    </div>
+  </div>
+</div>
+<h3>Recursos de Produtividade</h3>
+<p>
+  As experiências em empresas anteriores me colocaram em contato com recursos que
+  aprendi a reconhecer como necessários para o bom desempenho das equipes de projetos.
+</p>
+<div class="percent-container">
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc060">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Metodologia Agile/Scrum</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Google Workspace</div>
+    </div>
+  </div>
+  <div class="percent-box">
+    <div class="percent">
+      <svg class="perc080">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+      </svg>
+      <div class="perc-label">Microsoft 365</div>
+    </div>
+  </div>
+</div>
+</section>
+`
 
 // Content Box 3
 boxContent.cont3.en = `
