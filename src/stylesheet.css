@@ -525,3 +525,77 @@ background: #669;
     transform-origin: 100% 0;
     transition: transform 1.5s ease-in-out;
 }
+
+input {
+    width:100%;    
+    padding:10px;
+    box-sizing:border-box;
+    background:none;    
+    outline:none;
+    resize:none;
+    border:0;
+    font-family:'Roboto Mono', monospace;
+    transition:all .3s;
+    border-left:1px solid #eef;
+    border-bottom:1px solid #eef;
+    color:#669
+}
+
+textarea {
+    width:100%;    
+    padding:10px;
+    box-sizing:border-box;
+    background:none;
+    outline:none;
+    resize:none;
+    border:0;
+    font-family:'Roboto Mono', monospace;
+    transition:all .3s;
+    border-left:1px solid #eef;
+    border-bottom:1px solid #eef;
+    color:#669
+}
+
+input:focus, textarea:focus {    
+    border-left:1px solid #669;
+    border-bottom:1px solid #669;
+}
+
+::placeholder {
+    color: #6696;
+    opacity: 1;
+}
+  
+:-ms-input-placeholder {
+    color: #6696;
+}
+  
+::-ms-input-placeholder {
+    color: #6696;
+}
+
+button{    
+    margin: 0;
+    width: 120px;
+    height: 40px;       
+    font-family:'Poppins', sans-serif;
+    border:1px solid #669;
+    background:0;color:#669;
+    cursor:pointer;
+    transition:all 0.5s
+}
+
+.form-buttons{
+    display: flex;
+    justify-content: space-between;    
+}
+
+button:hover{
+    background:#669;
+    color:#fff
+}
+
+button:active{
+    background:#6699;
+    color:#eef
+}

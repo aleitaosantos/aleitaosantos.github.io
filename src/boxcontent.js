@@ -1747,9 +1747,168 @@ boxContent.cont5.fr = ``
 boxContent.cont5.pt = ``
 
 // Content Box 6
-boxContent.cont6.en = ``
-boxContent.cont6.fr = ``
-boxContent.cont6.pt = ``
+boxContent.cont6.en = `
+<header>
+<h2>Contact</h2>
+</header>
+<section>
+<p>Get in touch with me using the form below, my email or social network. I will be very pleased to receive your message.</p>
+<form class="form" name="contact" method="POST" data-netlify="true">                
+  <p><input
+    type="text"
+    name="name"
+    placeholder="Your name"
+    required
+    ></input></p>  
+  <p><input
+    type="email"
+    name="email"
+    placeholder="Your email"
+    required></input></p>
+  <p><textarea                  
+    rows="10"
+    name="message"
+    placeholder="Your message"
+    required></textarea></p>                
+<div class="form-buttons">
+  <div>
+    <a                    
+      rel="author"
+      title="Email"
+      href="mailto:alexandre.leitao.santos@gmail.com"
+      ><div class="social-icons"><i class="fa-solid fa-envelope"></i></div
+    ></a>
+    <a
+      target="_blank"
+      rel="external"
+      title="My GitHub profile"
+      href="https://github.com/aleitaosantos/"
+      ><div class="social-icons"><i class="fa-brands fa-github"></i></div
+    ></a>
+    <a
+      target="_blank"
+      rel="external"
+      title="My LinkedIn profile"
+      href="https://www.linkedin.com/in/alexandreleitao/"
+      ><div class="social-icons"><i class="fa-brands fa-linkedin-in"></i></div
+    ></a>
+</div>
+  <div>
+    <button type="submit">Send</button>
+  </div>
+</div>
+</form>
+<p></p>
+</section>
+`
+boxContent.cont6.fr = `
+<header>
+<h2>Contact</h2>
+</header>
+<section>
+<p>Contactez-moi via le formulaire ci-dessous, mon email ou mon réseau social. Je serai très heureux de recevoir votre message.</p>
+<form class="form" name="contact" method="POST" data-netlify="true">                
+  <p><input
+    type="text"
+    name="name"
+    placeholder="Votre nom"
+    required
+    ></input></p>  
+  <p><input
+    type="email"
+    name="email"
+    placeholder="Votre e-mail"
+    required></input></p>
+  <p><textarea                  
+    rows="10"
+    name="message"
+    placeholder="Votre message"
+    required></textarea></p>               
+<div class="form-buttons">
+  <div>
+    <a                    
+      rel="author"
+      title="E-mail"
+      href="mailto:alexandre.leitao.santos@gmail.com"
+      ><div class="social-icons"><i class="fa-solid fa-envelope"></i></div
+    ></a>
+    <a
+      target="_blank"
+      rel="external"
+      title="Mon profil GitHub"
+      href="https://github.com/aleitaosantos/"
+      ><div class="social-icons"><i class="fa-brands fa-github"></i></div
+    ></a>
+    <a
+      target="_blank"
+      rel="external"
+      title="Mon profil LinkedIn"
+      href="https://www.linkedin.com/in/alexandreleitao/"
+      ><div class="social-icons"><i class="fa-brands fa-linkedin-in"></i></div
+    ></a>
+</div>
+  <div>
+    <button type="submit">Envoyer</button>
+  </div>
+</div>
+</form>
+<p></p>
+</section>
+`
+boxContent.cont6.pt = `
+<header>
+<h2>Contact</h2>
+</header>
+<section>
+<p>Entre em contato comigo através do formulário abaixo, meu e-mail ou minha rede social. Ficarei muito feliz em receber sua mensagem.</p>
+<form class="form" name="contact" method="POST" data-netlify="true">                
+  <p><input
+    type="text"
+    name="name"
+    placeholder="Seu nome"
+    required
+    ></input></p>  
+  <p><input
+    type="email"
+    name="email"
+    placeholder="Seu e-mail"
+    required></input></p>
+  <p><textarea                  
+    rows="10"
+    name="message"
+    placeholder="Sua mensagem"
+    required></textarea></p>                
+<div class="form-buttons">
+  <div>
+    <a                    
+      rel="author"
+      title="E-mail"
+      href="mailto:alexandre.leitao.santos@gmail.com"
+      ><div class="social-icons"><i class="fa-solid fa-envelope"></i></div
+    ></a>
+    <a
+      target="_blank"
+      rel="external"
+      title="Meu perfil GitHub"
+      href="https://github.com/aleitaosantos/"
+      ><div class="social-icons"><i class="fa-brands fa-github"></i></div
+    ></a>
+    <a
+      target="_blank"
+      rel="external"
+      title="Meu perfil LinkedIn"
+      href="https://www.linkedin.com/in/alexandreleitao/"
+      ><div class="social-icons"><i class="fa-brands fa-linkedin-in"></i></div
+    ></a>
+</div>
+  <div>
+    <button type="submit" onclick="return confirm('Send message?')">Enviar</button>
+  </div>
+</div>
+</form>
+<p></p>
+</section>
+`
 
 // Export
 export {boxContent}
