@@ -6,6 +6,33 @@ import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRe
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { textChanger } from './textchanger.js'
 
+// Loader
+const loadingBarElement = document.querySelector('.loading-bar')
+const loadingManager = new THREE.LoadingManager(
+    // Loaded
+    () => {
+        gsap.to(document.querySelector('.loading-box'), {
+            duration: 1,
+            opacity: 0,
+            delay: 1,
+            onComplete: () => {
+                document.querySelector('.loading-box').style.zIndex = '-10'                       
+            }
+        })
+
+    },
+
+    // Progress
+    (itemUrl, itemsLoaded, itemsTotal) =>
+    {
+        // Calculate the progress and update the loadingBarElement
+        const progressRatio = itemsLoaded / itemsTotal
+        loadingBarElement.style.transform = `scaleX(${progressRatio})`
+    }
+)
+// const gltfLoader = new GLTFLoader(loadingManager)
+// const cubeTextureLoader = new THREE.CubeTextureLoader(loadingManager)
+
 
 // Init Declarations
 let currentIntersect, isCuboctaOpen, areTetrasMoving, isBoxOpen, mixer, idiom, boxWidth
@@ -16,13 +43,9 @@ const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
 }
-console.log(sizes.width, sizes.height)
-console.log(window.innerWidth, window.innerHeight)
-console.log(document.documentElement.clientWidth, document.documentElement.clientHeight)
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
-console.log(canvas.width, canvas.height)
 
 // Scene
 const scene = new THREE.Scene()
@@ -54,7 +77,7 @@ const tetrasRotationValues = {
     y: [0, 0, 0, 0, Math.PI/2, -Math.PI/2, Math.PI/2, -Math.PI/2, 0, 0, 0, 0],
     z: [0, Math.PI, 0, Math.PI, 0, 0, 0, 0, Math.PI/2, -Math.PI/2, Math.PI/2, -Math.PI/2]
 } 
-new GLTFLoader().load('/cubocta.glb', (gltf) => {
+new GLTFLoader(loadingManager).load('/cubocta.glb', (gltf) => {
     for(let i = 0; i < 12; i++){ 
         cubocta['tetra' + i] = gltf.scene.children[0].clone()
         cuboctaArr.push(cubocta['tetra' + i])
@@ -215,9 +238,10 @@ window.addEventListener('mousemove', () => {
 })
 
 // Cubocta Opener ==> Resolve position error
-window.addEventListener('click', () => {
+function cuboctaOpen() {
     if(currentIntersect) {
         if(!isCuboctaOpen && !isBoxOpen) {
+            canvas.style.zIndex = -1
             helpersArr.forEach((helper) => {
                 helper.translateOnAxis (tetrasTransVector, 10)
             })
@@ -245,12 +269,15 @@ window.addEventListener('click', () => {
             }, 5000)
         }             
     }       
-})
+}
+
+window.addEventListener('click', () => {cuboctaOpen()})
 
 // Cubocta Closer ==> Resolve position error
 window.addEventListener('dblclick', () => {
     if(currentIntersect) {
         if(isCuboctaOpen && !isBoxOpen) {
+            canvas.style.zIndex = 0
             unsetMainText()
             helpersArr.forEach((helper) => {
                 helper.position.x = 0
@@ -290,7 +317,7 @@ for(let i = 1; i < 7; i++) {
         if (sizes.width > 800) {
             boxWidth = '640px'
         } else {
-            boxWidth = '90vw'
+            boxWidth = '90%'
         }
         document.querySelector('.box').style.visibility = "visible"
         document.querySelector('.scroll').scrollTo(0,0)
@@ -312,7 +339,7 @@ for(let i = 1; i < 7; i++) {
         gsap.fromTo('.box', {
             height: 0
         }, {
-            height: '80vh',
+            height: '90%',
             delay: 0.5,
             duration: 1,
             ease: 'power3.out'

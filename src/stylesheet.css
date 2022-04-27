@@ -4,7 +4,8 @@
 }
 
 html, body {
-    overflow: hidden;    
+    overflow: hidden;
+    font-size: 1.8vh;
 }
 
 .webgl {
@@ -12,6 +13,7 @@ html, body {
     top: 0;
     left: 0;
     outline: none;
+    z-index: 0;
 }
 
 img {
@@ -53,7 +55,7 @@ h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     padding-top: 1em;
-    padding-bottom: 1em;
+    padding-bottom: 1em;    
 }
 
 h3 {
@@ -62,7 +64,7 @@ h3 {
     font-weight: 500;
     font-size: 1em;
     padding-top: 2em;
-    padding-bottom: 1em;
+    padding-bottom: 1em;    
 }
 
 h3::before {
@@ -75,7 +77,7 @@ h4 {
     font-weight: 500;
     font-size: 1em;
     padding-top: 2em;
-    padding-bottom: 1em;
+    padding-bottom: 1em;    
 }
 
 .main {
@@ -83,6 +85,18 @@ h4 {
     display: flex;
     align-items: stretch;
     visibility: visible;   
+}
+
+.main-container {
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: calc(100% - 120px);  
+    top: 80px;
+    left: 40px;
+    z-index: 0;
 }
 
 .main h1{
@@ -111,7 +125,7 @@ h4 {
 .box {
     position: absolute;
     width: 640px;
-    height: 80vh;
+    height: 90%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -177,7 +191,7 @@ h4 {
     overflow-x: hidden;
     overflow-y: auto;
     scroll-behavior: smooth;
-    text-align: justify;
+    text-align: left;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
@@ -188,6 +202,7 @@ h4 {
     font-family: 'Roboto Mono', monospace;
     font-size: 0.75em;
     line-height: 2.25em;
+    text-align: justify;
 }
 
 .sphere-label {
@@ -197,7 +212,8 @@ h4 {
     font-size: 1em;
     font-weight: 500;
     padding: 2px;
-    transition: font-size 0.5s ease-in-out, opacity 0.25s ease-in-out, color 0.1s
+    transition: font-size 0.5s ease-in-out, opacity 0.25s ease-in-out, color 0.1s;
+    z-index: 10;
 }
 
 .sphere-label:hover {
@@ -208,14 +224,6 @@ h4 {
 
 .sphere-label:active {
     color: #edd;   
-}
-
-.main-title {
-    z-index: 10;
-    position: absolute;
-    top: 80px;
-    left: 40px;
-    width: 31vw;
 }
 
 .title-flex {
@@ -249,10 +257,10 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #eef;
+    background-color: #6696;
     border-radius: 5px;
-    font-size: 1.5em;
-    min-width: 40px;
+    font-size: 20px;
+    width: 40px;
     height: 40px;
     transition: background-color 0.5s ease-in-out;
 }
@@ -372,7 +380,7 @@ h4 {
     cursor: help;
 }
 
-.loader-box {
+.loading-box {
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -385,10 +393,15 @@ h4 {
     flex-direction: column;
     z-index: 20;
     background-color: white;
-    visibility: hidden;    
+    visibility: visible;    
 }
 
-.loader-polyline {
+loading-container {
+    width: 150px;
+    background-color: red;
+}
+
+.loading-polyline {
     fill: none;
     stroke: #669;
     stroke-width: 16px;
@@ -451,7 +464,11 @@ background: #669;
     --anim: 1
 }
 
-@media only screen and (max-width : 800px) {
+@media only screen and (max-width: 800px) and (max-aspect-ratio: 4/3) {
+    body {
+        font-size: 2.4vh;
+    }
+    
     .box {        
         width: 90vw;        
     }
@@ -462,5 +479,52 @@ background: #669;
     
     .scroll {
         padding-right: 18px;
+        height: calc(100% - 10px);
+    }    
+}
+
+@media only screen and (max-aspect-ratio: 4/3) {   
+    .main-container {
+        justify-content: space-between;
+        width: calc(100% - 80px);
+        height: calc(100% - 80px);
+        top: 40px;       
     }
+    .main h1{
+        font-size: 2.4em;
+    }
+    .main h2{
+        font-size: 1.6em;        
+    }
+
+    .main p{
+        font-size: 0.8em;
+    }
+
+    .sphere-label{
+        font-size: 0.8em;
+    }
+
+    .sphere-label:hover{
+        font-size: 1em;
+    }
+}
+
+.loading-bar
+{
+    position: relative;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background: #669;
+    transform: scaleX(0.3);
+    transform-origin: top left;
+    transition: transform 0.5s;
+}
+
+.loading-box.ended
+{
+    transform: scaleX(0);
+    transform-origin: 100% 0;
+    transition: transform 1.5s ease-in-out;
 }
