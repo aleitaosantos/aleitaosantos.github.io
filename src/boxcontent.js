@@ -1744,7 +1744,428 @@ boxContent.cont4.pt = `
 // Content Box 5
 boxContent.cont5.en = ``
 boxContent.cont5.fr = ``
-boxContent.cont5.pt = ``
+boxContent.cont5.pt = `
+<header>
+<h2>Competências</h2>
+</header>
+<section>
+<h3>Projetos para a Web</h3>
+<h4>Autorais</h4>
+<div class="project-container">
+  <div class="project-boxes">
+    <div class="project-box">
+      <div class="icons">
+        <a
+          target="_blank"
+          rel="external"
+          href="https://github.com/aleitaosantos/alexandreleitao-v1"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a target="_blank" rel="external" href="https://alexandreleitao.netlify.app/"
+          ><i class="fa-solid fa-up-right-from-square"></i
+        ></a>
+      </div>
+      <div class="project-title">Website Pessoal</div>
+      <div class="year">2022</div>
+    </div>
+    <div class="project-box">
+      <div class="icons">
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-solid fa-up-right-from-square"></i>
+      </div>
+      <div class="project-title">Unesco Heritage Sites</div>
+      <div class="year">2022</div>
+    </div>
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">Website Anhumas Arquitetos Associados</div>
+      <div class="year">2016</div>
+    </div>
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">Website Gabinete Urbano</div>
+      <div class="year">2015</div>
+    </div>
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">Website Curso Linguagem</div>
+      <div class="year">2015</div>
+    </div>
+  </div>
+</div>
+</section>
+<section>
+<h3>Projetos Gráficos</h3>
+<h4>Autorais</h4>
+<div class="project-container">
+  <div class="project-boxes">
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">Anuário LEAUC</div>
+      <div class="year">2022</div>
+    </div>
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">Branding Urbanicidades</div>
+      <div class="year">2016-2022</div>
+    </div>
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">Branding Anhumas Arquitetos Associados</div>
+      <div class="year">2016</div>
+    </div>
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">Branding Gabinete Urbano</div>
+      <div class="year">2014</div>
+    </div>
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">Branding Gato Urbano</div>
+      <div class="year">2015</div>
+    </div>
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">Comunicação Estudos Urbanos SP</div>
+      <div class="year">2014</div>
+    </div>
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">Branding EREA SP</div>
+      <div class="year">2007</div>
+    </div>
+  </div>
+</div>
+</section>
+<section>
+<h3>Projetos de Arquitetura</h3>
+<h4>Autorais</h4>
+<div class="project-container">
+  <div class="project-boxes">
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Museu Marítimo do Brasil</p>
+        <p>Rio de Janeiro</p>
+      </div>
+      <div class="year">2021</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Igreja "Nova Semente"</p>
+        <p>São Paulo</p>
+      </div>
+      <div class="year">2021</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>CEVISA</p>
+        <p>Engenheiro Coelho</p>
+      </div>
+      <div class="year">2021</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Residência Cazarotto</p>
+        <p>Campinas</p>
+      </div>
+      <div class="year">2021</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Residência Gnatos</p>
+        <p>Campinas</p>
+      </div>
+      <div class="year">2021</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Residência Vasconcellos</p>
+        <p>Campinas</p>
+      </div>
+      <div class="year">2021</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Hospital Veterinário Universitário</p>
+        <p>Engenheiro Coelho</p>
+      </div>
+      <div class="year">2019</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Residência Mussi</p>
+        <p>Paraty</p>
+      </div>
+      <div class="year">2018</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Residência Biller</p>
+        <p>Campinas</p>
+      </div>
+      <div class="year">2017</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Residência Rodrigues</p>
+        <p>Porto Velho</p>
+      </div>
+      <div class="year">2017</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Escola Criar</p>
+        <p>Campinas</p>
+      </div>
+      <div class="year">2017</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Casa da Sustentabilidade</p>
+        <p>Campinas</p>
+      </div>
+      <div class="year">2016</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Conjunto "Sol Nascente"</p>
+        <p>Brasília</p>
+      </div>
+      <div class="year">2016</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Clínica Cazarotto</p>
+        <p>Campinas</p>
+      </div>
+      <div class="year">2016</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Estúdio Anhumas</p>
+        <p>Campinas</p>
+      </div>
+      <div class="year">2016</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Residência Neves</p>
+        <p>Campinas</p>
+      </div>
+      <div class="year">2016</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Residência Samantha</p>
+        <p>Araras</p>
+      </div>
+      <div class="year">2015</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Biblioteca FDUSP</p>
+        <p>São Paulo</p>
+      </div>
+      <div class="year">2013</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Cobertura do Mercado Público</p>
+        <p>Florianópolis</p>
+      </div>
+      <div class="year">2013</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Confederação Nacional dos Municípios</p>
+        <p>Brasília</p>
+      </div>
+      <div class="year">2010</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Biblioteca Pública</p>
+        <p>Florianópolis</p>
+      </div>
+      <div class="year">2010</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Marcos Rodoviários</p>
+        <p>Brusque</p>
+      </div>
+      <div class="year">2010</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Residência Fátima Leitão</p>
+        <p>São Carlos</p>
+      </div>
+      <div class="year">2010</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Terminais Marítimos Metropolitanos</p>
+        <p>Florianópolis</p>
+      </div>
+      <div class="year">2009</div>
+    </div>
+  </div>
+</div>
+
+<h4>Em colaboração</h4>
+
+<div class="project-container">
+  <div class="project-boxes">
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Subsea Seven</p>
+        <p>Rio de Janeiro</p>
+      </div>
+      <div class="year">2011</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>IBM</p>
+        <p>Hortolândia</p>
+      </div>
+      <div class="year">2011</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>General Motors do Brasil</p>
+        <p>São Caetano do Sul</p>
+      </div>
+      <div class="year">2010</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Galeria de Arte</p>
+        <p>São Paulo</p>
+      </div>
+      <div class="year">2010</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Residência na Vila Ida</p>
+        <p>São Paulo</p>
+      </div>
+      <div class="year">2010</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Museus da USP</p>
+        <p>São Paulo</p>
+      </div>
+      <div class="year">2010</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Instituto de Tecnologia Vale</p>
+        <p>Belém</p>
+      </div>
+      <div class="year">2010</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Conjunto "Comandante Taylor"</p>
+        <p>São Paulo</p>
+      </div>
+      <div class="year">2010</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Biblioteca Mário de Andrade</p>
+        <p>São Paulo</p>
+      </div>
+      <div class="year">2010</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Centro de Apoio Cosan</p>
+        <p>Piracicaba</p>
+      </div>
+      <div class="year">2010</div>
+    </div>
+
+    <div class="project-box">
+      <div class="icons"></div>
+      <div class="project-title">
+        <p>Fatec Jaguaré</p>
+        <p>São Paulo</p>
+      </div>
+      <div class="year">2010</div>
+    </div>
+  </div>
+</div>
+</section>
+`
 
 // Content Box 6
 boxContent.cont6.en = `
