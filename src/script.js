@@ -514,34 +514,34 @@ const tick = () =>
 
     ////////RESOLVE THIS!!!
     if(intersects.length && !areTetrasMoving) {
-        if(currentIntersect === null) {
-            cuboctaArr.forEach((tetra) => {
-                helpersArr.forEach((helper) => {
-                helper.translateOnAxis (tetrasTransVector, 0.05)
-                })
-                for(let i = 0; i < cuboctaArr.length; i++){
-                    gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, duration: 0.25})
-                    gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, duration: 0.25})
-                    gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, duration: 0.25})
-                }
-            })                
-        }
+        // if(currentIntersect === null) {
+        //     cuboctaArr.forEach((tetra) => {
+        //         helpersArr.forEach((helper) => {
+        //         helper.translateOnAxis (tetrasTransVector, 0.05)
+        //         })
+        //         for(let i = 0; i < cuboctaArr.length; i++){
+        //             gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, duration: 0.25})
+        //             gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, duration: 0.25})
+        //             gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, duration: 0.25})
+        //         }
+        //     })                
+        // }
         currentIntersect = intersects[0]
     } else {
-        if(currentIntersect) {        
-            cuboctaArr.forEach((tetra) => {
-                helpersArr.forEach((helper) => {
-                    helper.position.x = 0
-                    helper.position.y = 0
-                    helper.position.z = 0
-                })
-                for(let i = 0; i < cuboctaArr.length; i++){
-                    gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, duration: 1})
-                    gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, duration: 1})
-                    gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, duration: 1})
-                }
-            })        
-        }
+        // if(currentIntersect) {        
+        //     cuboctaArr.forEach((tetra) => {
+        //         helpersArr.forEach((helper) => {
+        //             helper.position.x = 0
+        //             helper.position.y = 0
+        //             helper.position.z = 0
+        //         })
+        //         for(let i = 0; i < cuboctaArr.length; i++){
+        //             gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, duration: 1})
+        //             gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, duration: 1})
+        //             gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, duration: 1})
+        //         }
+        //     })        
+        // }
         currentIntersect = null
     }
 
