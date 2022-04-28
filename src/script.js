@@ -6,6 +6,11 @@ import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRe
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { textChanger } from './textchanger.js'
 
+// Init Declarations
+let currentIntersect, isCuboctaOpen, areTetrasMoving,
+isBoxOpen, mixer, idiom, boxWidth, movementStart, loaded, pulseInterval, pulse
+let activeBox = 1
+
 // Loader
 const loadingBarElement = document.querySelector('.loading-bar')
 const loadingManager = new THREE.LoadingManager(
@@ -16,27 +21,17 @@ const loadingManager = new THREE.LoadingManager(
             opacity: 0,
             delay: 1,
             onComplete: () => {
-                document.querySelector('.loading-box').style.zIndex = '-10'                       
+                document.querySelector('.loading-box').style.zIndex = '-10'
             }
         })
+        loaded = true
 
     },
-
-    // Progress
-    (itemUrl, itemsLoaded, itemsTotal) =>
-    {
-        // Calculate the progress and update the loadingBarElement
+    (itemUrl, itemsLoaded, itemsTotal) => {
         const progressRatio = itemsLoaded / itemsTotal
         loadingBarElement.style.transform = `scaleX(${progressRatio})`
     }
 )
-// const gltfLoader = new GLTFLoader(loadingManager)
-// const cubeTextureLoader = new THREE.CubeTextureLoader(loadingManager)
-
-
-// Init Declarations
-let currentIntersect, isCuboctaOpen, areTetrasMoving, isBoxOpen, mixer, idiom, boxWidth
-let activeBox = 1
 
 // Sizes
 const sizes = {
@@ -237,19 +232,26 @@ window.addEventListener('mousemove', () => {
     }
 })
 
-// Cubocta Opener ==> Resolve position error
+// Cubocta Opener
+function resetHelpers() {
+    helpersArr.forEach((helper) => {
+        helper.position.x = 0
+        helper.position.y = 0
+        helper.position.z = 0
+    })
+}
+
+
 function cuboctaOpen() {
     if(currentIntersect) {
         if(!isCuboctaOpen && !isBoxOpen) {
+            stopPulse(4)
             canvas.style.zIndex = -1
+            resetHelpers()
             helpersArr.forEach((helper) => {
-                helper.translateOnAxis (tetrasTransVector, 10)
+                helper.translateOnAxis (tetrasTransVector, 10)                
             })
-            for(let i = 0; i < cuboctaArr.length; i++){
-                gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, duration: 5, ease: 'power3'})
-                gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, duration: 5, ease: 'power3'})
-                gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, duration: 5, ease: 'power3'})
-            }               
+            reachHelper(5, 'power3')
             gsap.to(camera, {fov: 15, zoom: 0.5, duration: 5, onUpdate: () => {camera.updateProjectionMatrix()}})
             document.querySelector('.main').style.visibility = 'visible'
             labelsArr.forEach((label) => {
@@ -266,6 +268,7 @@ function cuboctaOpen() {
             areTetrasMoving = true
             setTimeout(() => {
                 areTetrasMoving = false
+                startMovement()
             }, 5000)
         }             
     }       
@@ -273,24 +276,16 @@ function cuboctaOpen() {
 
 window.addEventListener('click', () => {cuboctaOpen()})
 
-// Cubocta Closer ==> Resolve position error
+// Cubocta Closer
 window.addEventListener('dblclick', () => {
     if(currentIntersect) {
         if(isCuboctaOpen && !isBoxOpen) {
             canvas.style.zIndex = 0
             unsetMainText()
-            helpersArr.forEach((helper) => {
-                helper.position.x = 0
-                helper.position.y = 0
-                helper.position.z = 0
-            })
-            for(let i = 0; i < cuboctaArr.length; i++){
-                gsap.to(cuboctaArr[i].position, {x: 0, duration: 5, ease: 'power3'})
-                gsap.to(cuboctaArr[i].position, {y: 0, duration: 5, ease: 'power3'})
-                gsap.to(cuboctaArr[i].position, {z: 0, duration: 5, ease: 'power3'})
-            }   
+            stopPulse(5)
+            resetHelpers()
             gsap.to(camera, {fov: 60, zoom: 1, duration: 5, onUpdate: () => {camera.updateProjectionMatrix()}})
-                 
+                
             document.querySelector('#mainIdiomChangers').style.visibility = 'hidden'
             document.querySelector('.social-icons-box').style.visibility = 'hidden'
             labelsArr.forEach((label) => {
@@ -299,14 +294,9 @@ window.addEventListener('dblclick', () => {
             areTetrasMoving = true
             setTimeout(() => {
                 isCuboctaOpen = false
-                areTetrasMoving = false
-                for(let i = 0; i < cuboctaArr.length; i++){
-                    cuboctaArr[i].position.x = 0
-                    cuboctaArr[i].position.y = 0
-                    cuboctaArr[i].position.z = 0                    
-                }                
-                clock.start()                
-            }, 5000)            
+                areTetrasMoving = false            
+                startMovement()
+            }, 5000)                        
         }
     }
 })
@@ -465,15 +455,69 @@ window.addEventListener('resize', () => {
     webGLRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))    
     css2DRenderer.setSize(sizes.width, sizes.height)
     webGLRenderer.setSize(sizes.width, sizes.height)
-})
+});
 
 
 //// ANIMATE ////
 
+// with gsap
+function stopPulse(dur = 2) {
+    pulse = false
+    movementStart = false
+    clearInterval(pulseInterval)      
+    for(let i = 0; i < cuboctaArr.length; i++){
+        gsap.to(cuboctaArr[i].position, {x: 0, duration: dur, ease: 'power3'})
+        gsap.to(cuboctaArr[i].position, {y: 0, duration: dur, ease: 'power3'})
+        gsap.to(cuboctaArr[i].position, {z: 0, duration: dur, ease: 'power3'})
+    }         
+}
+
+function reachHelper(dur = 1, eas = 'sine.inOut') {
+    for(let i = 0; i < cuboctaArr.length; i++){
+        gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, duration: dur, ease: eas})
+        gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, duration: dur, ease: eas})
+        gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, duration: dur, ease: eas})
+    }
+}
+
+function startMovement() {
+    pulse = true
+    setInterval(() => {
+        if(loaded && !movementStart){
+            movementStart = true
+            pulseInterval = setInterval(() => {
+                if (pulse) { 
+                    for(let i = 0; i < helpersArr.length; i++){                
+                        helpersArr[i].translateOnAxis (tetrasTransVector, 0.5)
+                    }    
+                    for(let i = 0; i < cuboctaArr.length; i++){
+                        gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})
+                        gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})
+                        gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})
+                    }
+                    setTimeout(() => {
+                        for(let i = 0; i < helpersArr.length; i++){                            
+                            helpersArr[i].translateOnAxis (tetrasTransVector, -0.5)
+                        }    
+                        for(let i = 0; i < cuboctaArr.length; i++){
+                            gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})
+                            gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})
+                            gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})                        
+                        }
+                    }, 1000)
+                }
+            }, 2000)
+        }    
+    }, 1)
+}
+startMovement()
+pulse = true
+
+// with three.clock
 const clock = new THREE.Clock()
 let previousTime = 0
-const tick = () =>
-{
+const tick = () => {
+
     const elapsedTime = clock.getElapsedTime()
     const deltaTime = elapsedTime - previousTime
     previousTime = elapsedTime
@@ -481,12 +525,11 @@ const tick = () =>
         mixer.update(deltaTime)
     }
 
-    // Update model
-    setTimeout(() => {   
-        cuboctaArr.forEach((tetra) => {
-            tetra.translateOnAxis(tetrasTransVector, ((Math.sin(elapsedTime*Math.PI))/100))
-        })        
-    }, 1000)
+    // Cast a ray
+    raycaster.setFromCamera(mouse, camera)
+
+    const objectsToTest = cuboctaArr 
+    const intersects = raycaster.intersectObjects(objectsToTest)
 
     spheresGroup.rotation.x = Math.sin(elapsedTime/10)*Math.PI
     spheresGroup.rotation.y = Math.cos(elapsedTime/10)*Math.PI
@@ -506,44 +549,19 @@ const tick = () =>
     camera.position.set(mouse.x*5+20, mouse.y*5+20, 20)
     camera.lookAt(new THREE.Vector3(0, 0, 0))    
 
-    // Cast a ray
-    raycaster.setFromCamera(mouse, camera)
-
-    const objectsToTest = cuboctaArr 
-    const intersects = raycaster.intersectObjects(objectsToTest)
-
-    ////////RESOLVE THIS!!!
+    // Hover tests
     if(intersects.length && !areTetrasMoving) {
-        // if(currentIntersect === null) {
-        //     cuboctaArr.forEach((tetra) => {
-        //         helpersArr.forEach((helper) => {
-        //         helper.translateOnAxis (tetrasTransVector, 0.05)
-        //         })
-        //         for(let i = 0; i < cuboctaArr.length; i++){
-        //             gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, duration: 0.25})
-        //             gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, duration: 0.25})
-        //             gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, duration: 0.25})
-        //         }
-        //     })                
-        // }
+        if(currentIntersect === null && !isCuboctaOpen) {
+        stopPulse()
+        }
         currentIntersect = intersects[0]
     } else {
-        // if(currentIntersect) {        
-        //     cuboctaArr.forEach((tetra) => {
-        //         helpersArr.forEach((helper) => {
-        //             helper.position.x = 0
-        //             helper.position.y = 0
-        //             helper.position.z = 0
-        //         })
-        //         for(let i = 0; i < cuboctaArr.length; i++){
-        //             gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, duration: 1})
-        //             gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, duration: 1})
-        //             gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, duration: 1})
-        //         }
-        //     })        
-        // }
+        if(currentIntersect && !isCuboctaOpen) {        
+        startMovement()
+        }
         currentIntersect = null
     }
+
 
     // Render
     webGLRenderer.render(scene, camera)
