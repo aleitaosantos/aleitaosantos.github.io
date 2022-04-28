@@ -405,27 +405,31 @@ async function setMainText() {
     await textChanger(boxContent.iDo.en, document.querySelector('#iDo'), 30)
     await textChanger(boxContent.presentation.en, document.querySelector('#presentation'), 10)    
     for (let i = 1; i < 7; i++) {
-        await textChanger((labels['content' + i]).en, document.querySelector(`#sphereLabel${i}`), 50)
+        setTimeout(() => {
+            textChanger((labels['content' + i]).en, document.querySelector(`#sphereLabel${i}`), 50)
+        }, 200*i);
     }
 }
 async function unsetMainText() {
+    for (let i = 1; i < 7; i++) {
+        await textChanger('', document.querySelector(`#sphereLabel${i}`), 0)
+    }
     await textChanger('', document.querySelector('#helloWorld'), 20)
     await textChanger('', document.querySelector('#myName'), 40)
     await textChanger('', document.querySelector('#iDo'), 30)
     await textChanger('', document.querySelector('#presentation'), 10)    
-    for (let i = 1; i < 7; i++) {
-        await textChanger('', document.querySelector(`#sphereLabel${i}`), 0)
-    }
     idiom = undefined
 }
 
 // Idiom Changer
 async function changeIdiomFancy(id) {  
-    await textChanger(boxContent.helloWorld[id], document.querySelector('#helloWorld'), 25)
-    await textChanger(boxContent.iDo[id], document.querySelector('#iDo'), 50)
-    await textChanger(boxContent.presentation[id], document.querySelector('#presentation'), 10)    
+    textChanger(boxContent.helloWorld[id], document.querySelector('#helloWorld'), 25)
+    textChanger(boxContent.iDo[id], document.querySelector('#iDo'), 50)
+    textChanger(boxContent.presentation[id], document.querySelector('#presentation'), 10)    
     for (let i = 1; i < 7; i++) {
-        await textChanger((labels['content' + i])[id], document.querySelector(`#sphereLabel${i}`), 50)
+        setTimeout(() => {            
+            textChanger((labels['content' + i])[id], document.querySelector(`#sphereLabel${i}`), 50)
+        }, 200*i);
     }   
 }
 
@@ -512,30 +516,30 @@ const tick = () =>
     if(intersects.length && !areTetrasMoving) {
         if(currentIntersect === null) {
             cuboctaArr.forEach((tetra) => {
-                // helpersArr.forEach((helper) => {
-                // helper.translateOnAxis (tetrasTransVector, 0.05)
-                // })
-                // for(let i = 0; i < cuboctaArr.length; i++){
-                //     gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, duration: 0.25})
-                //     gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, duration: 0.25})
-                //     gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, duration: 0.25})
-                // }
+                helpersArr.forEach((helper) => {
+                helper.translateOnAxis (tetrasTransVector, 0.05)
+                })
+                for(let i = 0; i < cuboctaArr.length; i++){
+                    gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, duration: 0.25})
+                    gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, duration: 0.25})
+                    gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, duration: 0.25})
+                }
             })                
         }
         currentIntersect = intersects[0]
     } else {
         if(currentIntersect) {        
             cuboctaArr.forEach((tetra) => {
-                // helpersArr.forEach((helper) => {
-                //     helper.position.x = 0
-                //     helper.position.y = 0
-                //     helper.position.z = 0
-                // })
-                // for(let i = 0; i < cuboctaArr.length; i++){
-                //     gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, duration: 1})
-                //     gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, duration: 1})
-                //     gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, duration: 1})
-                // }
+                helpersArr.forEach((helper) => {
+                    helper.position.x = 0
+                    helper.position.y = 0
+                    helper.position.z = 0
+                })
+                for(let i = 0; i < cuboctaArr.length; i++){
+                    gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, duration: 1})
+                    gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, duration: 1})
+                    gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, duration: 1})
+                }
             })        
         }
         currentIntersect = null

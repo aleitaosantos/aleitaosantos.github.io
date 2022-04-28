@@ -1746,10 +1746,10 @@ boxContent.cont5.en = ``
 boxContent.cont5.fr = ``
 boxContent.cont5.pt = `
 <header>
-<h2>Competências</h2>
+<h2>Projetos</h2>
 </header>
 <section>
-<h3>Projetos para a Web</h3>
+<h3>Web</h3>
 <h4>Autorais</h4>
 <div class="project-container">
   <div class="project-boxes">
@@ -1795,7 +1795,7 @@ boxContent.cont5.pt = `
 </div>
 </section>
 <section>
-<h3>Projetos Gráficos</h3>
+<h3>Design Gráfico</h3>
 <h4>Autorais</h4>
 <div class="project-container">
   <div class="project-boxes">
@@ -1838,7 +1838,7 @@ boxContent.cont5.pt = `
 </div>
 </section>
 <section>
-<h3>Projetos de Arquitetura</h3>
+<h3>Arquitetura e Urbanismo</h3>
 <h4>Autorais</h4>
 <div class="project-container">
   <div class="project-boxes">
