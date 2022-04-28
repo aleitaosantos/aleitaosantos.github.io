@@ -241,17 +241,28 @@ function resetHelpers() {
     })
 }
 
-
 function cuboctaOpen() {
     if(currentIntersect) {
         if(!isCuboctaOpen && !isBoxOpen) {
-            stopPulse(4)
+            pulse = false
+            for(let i = 0; i < cuboctaArr.length; i++){
+                if (pulseAnim['x'+i] && pulseAnim['y'+i] && pulseAnim['z'+i]) {
+                    pulseAnim['x'+i].kill()        
+                    pulseAnim['y'+i].kill()
+                    pulseAnim['z'+i].kill()
+                }
+            }        
+            clearInterval(pulseInterval)
             canvas.style.zIndex = -1
             resetHelpers()
             helpersArr.forEach((helper) => {
                 helper.translateOnAxis (tetrasTransVector, 10)                
-            })
-            reachHelper(5, 'power3')
+            })            
+            for(let i = 0; i < cuboctaArr.length; i++){
+                gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, duration: 5, ease: 'power3'})
+                gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, duration: 5, ease: 'power3'})
+                gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, duration: 5, ease: 'power3'})
+            }
             gsap.to(camera, {fov: 15, zoom: 0.5, duration: 5, onUpdate: () => {camera.updateProjectionMatrix()}})
             document.querySelector('.main').style.visibility = 'visible'
             labelsArr.forEach((label) => {
@@ -268,6 +279,7 @@ function cuboctaOpen() {
             areTetrasMoving = true
             setTimeout(() => {
                 areTetrasMoving = false
+                movementStart = false
                 startMovement()
             }, 5000)
         }             
@@ -282,19 +294,20 @@ window.addEventListener('dblclick', () => {
         if(isCuboctaOpen && !isBoxOpen) {
             canvas.style.zIndex = 0
             unsetMainText()
-            stopPulse(5)
-            resetHelpers()
-            gsap.to(camera, {fov: 60, zoom: 1, duration: 5, onUpdate: () => {camera.updateProjectionMatrix()}})
-                
             document.querySelector('#mainIdiomChangers').style.visibility = 'hidden'
             document.querySelector('.social-icons-box').style.visibility = 'hidden'
             labelsArr.forEach((label) => {
                 label.visible = false
             })      
+            stopPulse()            
+            gsap.to(camera, {fov: 60, zoom: 1, duration: 5, onUpdate: () => {camera.updateProjectionMatrix()}})
+                
             areTetrasMoving = true
-            setTimeout(() => {
+            setTimeout(() => {                
                 isCuboctaOpen = false
-                areTetrasMoving = false            
+                areTetrasMoving = false                                            
+                movementStart = false
+                resetHelpers()
                 startMovement()
             }, 5000)                        
         }
@@ -461,48 +474,57 @@ window.addEventListener('resize', () => {
 //// ANIMATE ////
 
 // with gsap
-function stopPulse(dur = 2) {
-    pulse = false
-    movementStart = false
-    clearInterval(pulseInterval)      
-    for(let i = 0; i < cuboctaArr.length; i++){
-        gsap.to(cuboctaArr[i].position, {x: 0, duration: dur, ease: 'power3'})
-        gsap.to(cuboctaArr[i].position, {y: 0, duration: dur, ease: 'power3'})
-        gsap.to(cuboctaArr[i].position, {z: 0, duration: dur, ease: 'power3'})
-    }         
+
+const pulseAnim = {}
+for(let i = 0; i < cuboctaArr.length; i++) {
+    pulseAnim['x'+i] = gsap.to();
+    pulseAnim['y'+i] = gsap.to();
+    pulseAnim['z'+i] = gsap.to();
 }
 
-function reachHelper(dur = 1, eas = 'sine.inOut') {
+function stopPulse() {      
+    pulse = false
     for(let i = 0; i < cuboctaArr.length; i++){
-        gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, duration: dur, ease: eas})
-        gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, duration: dur, ease: eas})
-        gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, duration: dur, ease: eas})
-    }
+        if (pulseAnim['x'+i] && pulseAnim['y'+i] && pulseAnim['z'+i]) {
+            pulseAnim['x'+i].kill()        
+            pulseAnim['y'+i].kill()
+            pulseAnim['z'+i].kill()
+        }
+    }        
+    clearInterval(pulseInterval)
+    for(let i = 0; i < cuboctaArr.length; i++){
+        gsap.to(cuboctaArr[i].position, {x: 0, duration: 1, ease: 'power3'})
+        gsap.to(cuboctaArr[i].position, {y: 0, duration: 1, ease: 'power3'})
+        gsap.to(cuboctaArr[i].position, {z: 0, duration: 1, ease: 'power3'})
+    }   
 }
 
 function startMovement() {
     pulse = true
     setInterval(() => {
         if(loaded && !movementStart){
-            movementStart = true
+            movementStart = true             
             pulseInterval = setInterval(() => {
                 if (pulse) { 
                     for(let i = 0; i < helpersArr.length; i++){                
                         helpersArr[i].translateOnAxis (tetrasTransVector, 0.5)
                     }    
                     for(let i = 0; i < cuboctaArr.length; i++){
-                        gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})
-                        gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})
-                        gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})
+                        pulseAnim['x'+i] = gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})
+                        pulseAnim['y'+i] = gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})
+                        pulseAnim['y'+i] = gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})
+                        
                     }
                     setTimeout(() => {
-                        for(let i = 0; i < helpersArr.length; i++){                            
-                            helpersArr[i].translateOnAxis (tetrasTransVector, -0.5)
-                        }    
-                        for(let i = 0; i < cuboctaArr.length; i++){
-                            gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})
-                            gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})
-                            gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})                        
+                        if (pulse) {
+                            for(let i = 0; i < helpersArr.length; i++){                            
+                                helpersArr[i].translateOnAxis (tetrasTransVector, -0.5)
+                            }    
+                            for(let i = 0; i < cuboctaArr.length; i++){
+                                pulseAnim['x'+i] = gsap.to(cuboctaArr[i].position, {x: helpersArr[i].position.x, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})
+                                pulseAnim['y'+i] = gsap.to(cuboctaArr[i].position, {y: helpersArr[i].position.y, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})
+                                pulseAnim['z'+i] = gsap.to(cuboctaArr[i].position, {z: helpersArr[i].position.z, delay: i * 0.05, duration: 1, ease: 'sine.inOut'})                        
+                            }
                         }
                     }, 1000)
                 }
@@ -557,7 +579,8 @@ const tick = () => {
         currentIntersect = intersects[0]
     } else {
         if(currentIntersect && !isCuboctaOpen) {        
-        startMovement()
+        movementStart = false
+        startMovement()        
         }
         currentIntersect = null
     }
