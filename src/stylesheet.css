@@ -287,6 +287,73 @@ h4 {
     cursor: pointer
 }
 
+.project-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    justify-content:center;
+    margin-bottom: 40px;
+}
+
+.project-boxes {
+    max-width: 450px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    justify-content:flex-start;
+}
+
+.project-box {
+    width: 120px;
+    height: 120px;
+    padding: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;    
+    border:1px solid #669;
+    font-family: 'Roboto Mono', sans-serif;
+    margin: 5px;
+}
+
+.project-box .icons {
+    font-size: 0.75em;
+    align-items: right;
+    width: 100%;
+    height: 15px;
+    text-align: right;    
+}
+
+.project-box .project-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.75em;
+    width: 100%;
+    height: 50px;
+    text-align: center;    
+}
+
+.project-title p {
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: center;
+    padding: 0.25em;
+}
+
+.project-title p:last-of-type {
+    font-size: 0.75em;    
+}
+
+.project-box .year {
+    font-size: 0.75em;
+    width: 100%;
+    height: 15px;
+    text-align: left;
+}
+
 .percent-container {
     max-width: 100%;
     display: flex;
