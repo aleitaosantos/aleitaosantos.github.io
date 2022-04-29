@@ -32,7 +32,7 @@ function textChanger(newString, span, interval) {
     function change() {         
       setTimeout(() => {   
         changedStringArray[i] = newStringArray[i]
-        if (i < changedStringArray.length-2) {
+        if (i < changedStringArray.length-3) {
           changedStringArray[i+1] = '\u25AE'
         }
         let changedString = changedStringArray.join('')

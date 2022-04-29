@@ -25,48 +25,131 @@ boxContent.helloWorld.pt = `Olá, Mundo, meu nome é`
 boxContent.iDo.en = `Front-End Developer.`
 boxContent.iDo.fr = `Front-End Développeur.`
 boxContent.iDo.pt = `Desenvolvedor Front-End.`
-boxContent.presentation.en = `I'm an architect with over a decade of experience who chose to build things for the web. Passionate about graphic design, 3D modeling, product development and computer programming.`
-boxContent.presentation.fr = `Je suis un architecte avec plus d'une décennie d'expérience qui a choisi de construire des choses pour le web. Passionné par le graphisme, la modélisation 3D, le développement de produits et la programmation informatique.`
-boxContent.presentation.pt = `Sou um arquiteto com mais de uma década de experiência que optou por construir coisas para a web. Apaixonado por design gráfico, modelagem 3D, desenvolvimento de produtos e programação de computadores.`
+boxContent.presentation.en = `I'm a former architect with over a decade of experience who opted to build interfaces for the web. Passionate about graphic design, 3D modeling, product development and computer programming.`
+boxContent.presentation.fr = `Je suis un ancient architecte avec plus d'une décennie d'expérience qui a choisi de construire des interfaces pour le web. Passionné par le graphisme, la modélisation 3D, le développement de produits et la programmation informatique.`
+boxContent.presentation.pt = `Sou um ex-arquiteto com mais de uma década de experiência que optou por construir interfaces para a web. Apaixonado por design gráfico, modelagem 3D, desenvolvimento de produtos e programação de computadores.`
 
 // Content Box 1
 boxContent.cont1.en = `
+<head>
 <h2>About Me</h2>
-<h3>Degrees</h3>
-<div class="title-flex">
-  <h3>Master of Science</h3>
-  <img class="portrait" src="portrait.png" alt="Alexandre's portrait" />
-</div>
-<p>
-With 509 votes to 3 and 47 abstentions, the European Parliament adopted on Thursday a resolution recalling various measures necessary to protect children and young people fleeing violence and facilitate their integration into host country communities.
-“Every child has the right to be protected from violence, exploitation and abuse”, say MEPs, calling on EU countries to protect children from the risk of trafficking, illegal adoption and other types of abuse.
-They recommend that child protection officers be present at the borders to be able to swiftly and accurately identify vulnerable children, record their identity and nationality as well as their specific needs. Services, such as psychosocial support, maternal health support, protection against gender-based violence, family tracing and support for family reunification should be offered within the national child protection systems along with full access to all basic services and appropriate care.
-Unaccompanied and separated children and children in institutional care should have a guardian appointed. Child protection services in the country of their reception should continuously monitor them for their well-being and whereabouts after their arrival in the EU, the resolution states.
-Host countries should ensure they have the same access to education and health services as other children in the host countries, insist MEPs. They also advocate for relocation mechanisms that prioritise family reunification and the relocation of vulnerable children, such as for example the solidarity mechanism for medical transfers within the EU of children and young people in need of immediate life-saving treatment and therapy.
-MEPs call on EU countries to make the best use of available EU funds to support the socio-economic integration of refugees and protect them from discrimination and social exclusion. If necessary, additional resources should be provided, adds the text.
-</p>
-`
-boxContent.cont1.fr = `
-<h2>Lorem ipsum Français</h2>
-<p>
-Par 509 voix pour, 3 contre et 47 abstentions, le Parlement a adopté jeudi une résolution rappelant diverses mesures nécessaires pour protéger les enfants et les jeunes fuyant la violence et pour faciliter leur intégration dans les communautés des pays d’accueil.
-‘‘Tous les enfants ont le droit d’être protégés contre la violence, l’exploitation et les abus’’, affirment les députés, qui appellent les pays de l’UE à les protéger contre les risques de traite, d’adoption illégale et d’autres types d’abus.
-Ils recommandent que des officiers de protection des enfants soient présents aux frontières afin d’identifier rapidement et précisément les enfants vulnérables, d’enregistrer leur identité et leur nationalité ainsi que leurs besoins spécifiques. Des services, tels qu’un soutien psychologique, un soutien à la santé maternelle, une protection contre la violence fondée sur le genre, une recherche des familles ou un soutien à la réunification des familles, devraient être fournis dans le cadre des services nationaux de protection de l’enfance, ainsi qu’un accès total à tous les services essentiels et à des soins appropriés.
-Les enfants non accompagnés, séparés ou placés en institution devraient se voir désigner un tuteur par les services de protection de l’enfance du pays d’accueil. La résolution précise aussi que leur bien-être et leur localisation devraient faire l’objet d’une surveillance continue après leur arrivée dans l’UE.
-Les pays d’accueil devraient garantir un accès à l’éducation et aux services de santé identique à celui qu'ils offrent à leurs enfants, insistent les députés. Ces derniers plaident également en faveur de mécanismes de relocalisation qui donnent la priorité à la réunification des familles et à la relocalisation des enfants vulnérables, comme le mécanisme de solidarité pour les transferts médicaux intra-UE d’enfants et de jeunes nécessitant un traitement ou une thérapie qui pourrait leur sauver la vie.
-Les députés appellent les pays de l’UE à faire le meilleur usage possible des fonds de l’UE disponibles afin de promouvoir l’intégration socio-économique des réfugiés et de les protéger contre toute discrimination ou exclusion sociale. Si nécessaire, des ressources supplémentaires devraient être octroyées, ajoute le texte.
-</p>
+</head>
+<section>
+  <div class="photo-paragraph">
+    <img class="portrait" src="portrait.png" alt="Alexandre's portrait" />
+    <p>
+      My name is Alexandre Leitão Santos and I am passionate about design and
+      programming. I'm Portuguese and I lived my whole life in Brazil. I recently moved
+      to Europe. I graduated in architecture and urbanism at the University of São
+      Paulo, the institution from which I also obtained my Master of Science degree.
+    </p>
+  </div>
+  <p>
+    From very early on in my career I made bridges between architectural projects and
+    the field of information technology. This relationship ranged from the traditional
+    use of CAD and 3D modeling to the development of complex projects in BIM (Building
+    Information Modeling) and urban analysis in GIS (Geographic Information Systems). At
+    the same time, I had the opportunity to develop my skills in the field of graphic
+    design, something that started as a hobby but soon took on a formal dimension.
+  </p>
+  <p>
+    Professional needs led me to learn the fundamentals of computer science in addition
+    to programming languages. Today, I'm looking for a career as a developer that
+    considers my previous experiences and acquired skills.
+  </p>
+  <p>
+    I really enjoy working in teams, but I also value introspection time in developing
+    individual tasks. I always strive to discover new resources and maintain continuous
+    learning and, therefore, I seek stimulating environments to share knowledge.
+  </p>
+  <p>
+    I am passionate about gastronomy, photography, cinema and, of course, design. I have
+    three cats, a son and a lovely wife. I also like to chat about it all. If you want,
+    connect with me and let's talk!
+  </p>
+  </section>
+  `
+  boxContent.cont1.fr = `
+  <head>
+    <h2>Sur Moi</h2>
+  </head>
+  <section>
+  <div class="photo-paragraph">
+    <img class="portrait" src="portrait.png" alt="Alexandre's portrait" />
+    <p>
+      Je m'appelle Alexandre Leitão Santos et je suis passionné par le design et la
+      programmation. Je suis portugais et j'ai vécu toute ma vie au Brésil. J'ai récemment
+      déménagé en Europe. Je suis diplômé en architecture et urbanisme de l'Université de
+      São Paulo, l'institution où j'ai également obtenu mon Master of Science.
+    </p>
+  </div>
+  <p>
+    Très tôt dans ma carrière, j'ai établi des ponts entre les projets architecturaux et
+    le domaine des technologies de l'information. Cette relation allait de l'utilisation
+    traditionnelle du CAD et de la modélisation 3D au développement de projets complexes
+    en BIM (Modélisation des Informations du Bâtiment) et à l'analyse urbaine en SIG
+    (Systèmes d'Information Géographique). Parallèlement, j'ai eu l'opportunité de
+    développer mes compétences dans le domaine du design graphique, quelque chose qui a
+    commencé comme un passe-temps mais a rapidement pris une dimension formelle.
+  </p>
+  <p>
+    Les besoins professionnels m'ont amené à apprendre les bases de l'informatique en plus
+    des langages de programmation. Aujourd'hui, je recherche une carrière de développeur
+    qui mette à profit mes expériences précédentes et les compétences acquises.
+  </p>
+  <p>
+    J'aime vraiment travailler en équipe, mais j'apprécie le temps d'introspection dans le
+    développement des tâches individuelles. Je m'efforce toujours de découvrir de
+    nouvelles ressources et de maintenir un apprentissage continu et, par conséquent, je
+    recherche des environnements stimulants pour partager les connaissances.
+  </p>
+  <p>
+    Je suis passionné de gastronomie, de photographie, de cinéma et bien sûr de design.
+    J'ai trois chats, un fils et une femme adorable. J'aime aussi parler de tout ça. Si
+    vous le souhaitez, contactez-moi et parlons-en !
+  </p>
+</section>
 `
 boxContent.cont1.pt = `
-<h2>Lorem ipsum Português</h2>
+<head>
+<h2>Sobre Mim</h2>
+</head>
+<section>
+<div class="photo-paragraph">
+  <img class="portrait" src="portrait.png" alt="Alexandre's portrait" />
+  <p>
+    Me chamo Alexandre Leitão Santos e sou apaixonado por design e programação. Sou
+    português e morei minha vida toda no Brasil. Recentemente, passei a viver na
+    Europa. Me formei em arquitetura e urbanismo pela Universidade de São Paulo,
+    instituição pela qual também obtive meu título de Mestre em Ciências.
+  </p>
+</div>
 <p>
-Com 509 votos a favor, 3 contra e 47 abstenções, o Parlamento Europeu adotou na quinta-feira uma resolução que aponta várias medidas necessárias para proteger as crianças e os jovens que fogem da violência e facilitar a sua integração nas comunidades dos países de acolhimento.
-«Todas as crianças têm o direito de ser protegidas contra a violência, exploração e abusos», defendem os eurodeputados, apelando aos Estados-Membros para que protejam as crianças do risco de tráfico, adoção ilegal e outros tipos de abuso.
-Os eurodeputados recomendam a presença de agentes de proteção de menores nas fronteiras, com vista a poderem identificar de forma rápida e precisa as crianças vulneráveis, registar a sua identidade e nacionalidade, bem como as suas necessidades específicas. Os sistemas nacionais de proteção das crianças devem oferecer serviços como o apoio psicossocial, o apoio à saúde materna, a proteção contra a violência de género, o rastreio familiar e o apoio ao reagrupamento familiar, bem como o pleno acesso a todos os serviços básicos e cuidados adequados.
-As crianças não acompanhadas ou separadas e as crianças institucionalizadas devem ter um tutor designado. Os serviços de proteção de menores nos países de acolhimento devem monitorizar continuamente o seu bem-estar e o seu paradeiro após a sua chegada à UE, afirma a resolução.
-Os países de acolhimento devem assegurar o mesmo acesso à educação e aos serviços de saúde que as outras crianças nos países de acolhimento, insistem os eurodeputados. Defendem igualmente mecanismos de recolocação que deem prioridade ao reagrupamento familiar e à recolocação de crianças vulneráveis, como, por exemplo, o mecanismo de solidariedade para as transferências médicas na UE de crianças e jovens que necessitam de cuidados imediatos.
-Os eurodeputados apelam aos Estados-Membros da UE para que utilizem da melhor forma possível os fundos comunitários disponíveis com vista a apoiar a integração socioeconómica dos refugiados e protegê-los da discriminação e exclusão social. Se necessário, devem ser disponibilizados recursos adicionais, acrescenta o texto.
+  Desde muito cedo na carreira tracei pontes entre os projetos de arquitetura e o
+  campo da informática. Essa relação foi desde o tradicional uso do CAD e da modelagem
+  3D até o desenvolvimento de projetos complexos em BIM (Modelagem da Informação da
+  Construção) e de análises urbanas em SIG (Sistemas de Informação Geográfica). Ao
+  mesmo tempo, tive a oportunidade de desenvolver minhas habilidades no campo do
+  design gráfico, algo que começou como hobbie mas que logo tomou dimensão formal.
 </p>
+<p>
+  As necessidades profissionais me levaram a aprender os fundamentos das ciências da
+  computação, além de linguagens de programação. Hoje, busco uma carreira como
+  desenvolvedor que se utilize das minhas experiências prévias e das minhas
+  competências adquiridas.
+</p>
+<p>
+  Gosto muito de trabalhar em equipes, mas valorizo o tempo de introspecção no
+  desenvolvimento de tarefas individuais. Empenho-me sempre em conhecer novos recursos
+  e manter a aprendizagem continuada e, por isso, busco ambientes estimulantes para
+  compartilhar conhecimentos.
+</p>
+<p>
+  Sou aficionado por gastronomia, fotografia, cinema e, claro, por design. Tenho três
+  gatos, um filho e uma adorável esposa. Também gosto muito de falar sobre isso tudo.
+  Se você quiser, conecte-se a mim e vamos conversar!
+</p>
+</section>
 `
 // Content Box 2
 boxContent.cont2.en = `

@@ -5,7 +5,7 @@
 
 html, body {
     overflow: hidden;
-    font-size: 1.8vh;
+    /* font-size: 1.8vh; */
 }
 
 .webgl {
@@ -205,6 +205,25 @@ h4 {
     text-align: justify;
 }
 
+.photo-paragraph {
+    display: flex;    
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: flex-start;    
+    align-content: center;
+}
+
+.portrait {
+    object-fit: cover;
+    /* height: 200px; */
+    width: 25%;
+    background-color: #669;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    box-shadow: #6666991a 0px 5px 10px 0px, #6666991a 0px 0px 0px 1px;
+}
+
 .sphere-label {
     opacity: 0.25;
     color: #669;
@@ -230,13 +249,6 @@ h4 {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-}
-
-.portrait {
-    height: 135px;
-    width: 135px;
-    border-radius: 50%;
-    box-shadow: #6666991a 0px 5px 10px 0px, #6666991a 0px 0px 0px 1px;
 }
 
 .social-icons-box{
@@ -460,48 +472,6 @@ h4 {
     visibility: visible;    
 }
 
-loading-container {
-    width: 150px;
-    background-color: red;
-}
-
-.loading-polyline {
-    fill: none;
-    stroke: #669;
-    stroke-width: 16px;
-    stroke-linejoin: bevel;    
-    shape-rendering: geometricPrecision;    
-    stroke-linecap: round;
-    stroke-dasharray: 1767 1767;
-    stroke-dashoffset: 0;
-    animation: dash 10s linear infinite;
-}
-
-@keyframes dash {
-    0% {
-        stroke-dasharray: 0 3534;
-        stroke-dashoffset: 0;        
-    }
-    25% {
-        stroke-dasharray: 1767 1767;
-        stroke-dashoffset: 0;
-    }
-    50% {
-        stroke-dasharray: 0 3534;
-        stroke-dashoffset: -1767;
-    }
-    75% {
-        stroke-dasharray: 1767 1767;
-        stroke-dashoffset: -1767;
-    }
-    100% {
-        stroke-dasharray: 0 3534;
-        stroke-dashoffset: -3534;
-    }
-}
-
-
-
 ::-moz-selection { /* Code for Firefox */
     color: #669;
     background: #edd;
@@ -544,7 +514,21 @@ background: #669;
     .scroll {
         padding-right: 18px;
         height: calc(100% - 10px);
-    }    
+    }
+
+    .photo-paragraph {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .portrait {
+        height: 135px;
+        width: 135px;
+        border-radius: 50%;
+        margin-left: 0;
+        margin-bottom: 20px;
+        box-shadow: #6666991a 0px 5px 10px 0px, #6666991a 0px 0px 0px 1px;
+    }
 }
 
 @media only screen and (max-aspect-ratio: 4/3) {   

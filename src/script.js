@@ -19,7 +19,7 @@ const loadingManager = new THREE.LoadingManager(
         gsap.to(document.querySelector('.loading-box'), {
             duration: 1,
             opacity: 0,
-            delay: 1,
+            delay: 0.5,
             onComplete: () => {
                 document.querySelector('.loading-box').style.zIndex = '-10'
             }
