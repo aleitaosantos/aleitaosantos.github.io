@@ -1850,10 +1850,17 @@ boxContent.cont5.en = `
       <div class="year">2022</div>
     </div>
     <div class="project-box">
-      <div class="icons">
-        <i class="fa-brands fa-github"></i>
-        <i class="fa-solid fa-up-right-from-square"></i>
-      </div>
+    <div class="icons">
+    <a
+    target="_blank"
+    rel="external"
+    href="https://github.com/aleitaosantos/worldheritage"
+    ><i class="fa-brands fa-github"></i
+    ></a>
+      <a target="_blank" rel="external" href="https://worldheritage.netlify.app/"
+      ><i class="fa-solid fa-up-right-from-square"></i
+    ></a>
+    </div>
       <div class="project-title">Unesco Heritage Sites</div>
       <div class="year">2022</div>
     </div>
@@ -2273,8 +2280,15 @@ boxContent.cont5.fr = `
     </div>
     <div class="project-box">
       <div class="icons">
-        <i class="fa-brands fa-github"></i>
-        <i class="fa-solid fa-up-right-from-square"></i>
+      <a
+      target="_blank"
+      rel="external"
+      href="https://github.com/aleitaosantos/worldheritage"
+      ><i class="fa-brands fa-github"></i
+      ></a>
+        <a target="_blank" rel="external" href="https://worldheritage.netlify.app/"
+        ><i class="fa-solid fa-up-right-from-square"></i
+      ></a>
       </div>
       <div class="project-title">Sites du Patrimoine de l'Unesco</div>
       <div class="year">2022</div>
@@ -2694,10 +2708,17 @@ boxContent.cont5.pt = `
       <div class="year">2022</div>
     </div>
     <div class="project-box">
-      <div class="icons">
-        <i class="fa-brands fa-github"></i>
-        <i class="fa-solid fa-up-right-from-square"></i>
-      </div>
+    <div class="icons">
+    <a
+    target="_blank"
+    rel="external"
+    href="https://github.com/aleitaosantos/worldheritage"
+    ><i class="fa-brands fa-github"></i
+    ></a>
+      <a target="_blank" rel="external" href="https://worldheritage.netlify.app/"
+      ><i class="fa-solid fa-up-right-from-square"></i
+    ></a>
+    </div>
       <div class="project-title">Unesco Heritage Sites</div>
       <div class="year">2022</div>
     </div>
