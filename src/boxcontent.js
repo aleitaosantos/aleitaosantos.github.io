@@ -7,27 +7,27 @@
 // 6: 'Contact'
 
 // Declaration
-const boxContent = {}
-boxContent.helloWorld = {}
-boxContent.iDo = {}
-boxContent.presentation = {}
-boxContent.cont1 = {}
-boxContent.cont2 = {}
-boxContent.cont3 = {}
-boxContent.cont4 = {}
-boxContent.cont5 = {}
-boxContent.cont6 = {}
+const boxContent = {};
+boxContent.helloWorld = {};
+boxContent.iDo = {};
+boxContent.presentation = {};
+boxContent.cont1 = {};
+boxContent.cont2 = {};
+boxContent.cont3 = {};
+boxContent.cont4 = {};
+boxContent.cont5 = {};
+boxContent.cont6 = {};
 
 // Main
-boxContent.helloWorld.en = `Hello, World, my name is`
-boxContent.helloWorld.fr = `Bonjour, Monde, je m'appelle`
-boxContent.helloWorld.pt = `Olá, Mundo, meu nome é`
-boxContent.iDo.en = `Front-End Developer.`
-boxContent.iDo.fr = `Front-End Développeur.`
-boxContent.iDo.pt = `Desenvolvedor Front-End.`
-boxContent.presentation.en = `I'm a former architect with over a decade of experience who opted to build interfaces for the web. Passionate about graphic design, 3D modeling, product development and computer programming.`
-boxContent.presentation.fr = `Je suis un ancient architecte avec plus d'une décennie d'expérience qui a choisi de construire des interfaces pour le web. Passionné par le graphisme, la modélisation 3D, le développement de produits et la programmation informatique.`
-boxContent.presentation.pt = `Sou um ex-arquiteto com mais de uma década de experiência que optou por construir interfaces para a web. Apaixonado por design gráfico, modelagem 3D, desenvolvimento de produtos e programação de computadores.`
+boxContent.helloWorld.en = `Hello, World, my name is`;
+boxContent.helloWorld.fr = `Bonjour, Monde, je m'appelle`;
+boxContent.helloWorld.pt = `Olá, Mundo, meu nome é`;
+boxContent.iDo.en = `Front-End Developer.`;
+boxContent.iDo.fr = `Front-End Développeur.`;
+boxContent.iDo.pt = `Desenvolvedor Front-End.`;
+boxContent.presentation.en = `I'm a former architect with over a decade of experience who opted to build interfaces for the web. Passionate about graphic design, 3D modeling, product development and computer programming.`;
+boxContent.presentation.fr = `Je suis un ancient architecte avec plus d'une décennie d'expérience qui a choisi de construire des interfaces pour le web. Passionné par le graphisme, la modélisation 3D, le développement de produits et la programmation informatique.`;
+boxContent.presentation.pt = `Sou um ex-arquiteto com mais de uma década de experiência que optou por construir interfaces para a web. Apaixonado por design gráfico, modelagem 3D, desenvolvimento de produtos e programação de computadores.`;
 
 // Content Box 1
 boxContent.cont1.en = `
@@ -68,8 +68,8 @@ boxContent.cont1.en = `
     connect with me and let's talk!
   </p>
   </section>
-  `
-  boxContent.cont1.fr = `
+  `;
+boxContent.cont1.fr = `
   <head>
     <h2>Sur Moi</h2>
   </head>
@@ -109,7 +109,7 @@ boxContent.cont1.en = `
     vous le souhaitez, contactez-moi et parlons-en !
   </p>
 </section>
-`
+`;
 boxContent.cont1.pt = `
 <head>
 <h2>Sobre Mim</h2>
@@ -150,7 +150,7 @@ boxContent.cont1.pt = `
   Se você quiser, conecte-se a mim e vamos conversar!
 </p>
 </section>
-`
+`;
 // Content Box 2
 boxContent.cont2.en = `
 <header>
@@ -468,7 +468,7 @@ boxContent.cont2.en = `
   </div>
 </div>
 </section>
-`
+`;
 boxContent.cont2.fr = `
 <header>
 <h2>Compétences</h2>
@@ -786,7 +786,7 @@ boxContent.cont2.fr = `
   </div>
 </div>
 </section>
-`
+`;
 boxContent.cont2.pt = `
 <header>
 <h2>Competências</h2>
@@ -1104,7 +1104,7 @@ boxContent.cont2.pt = `
   </div>
 </div>
 </section>
-`
+`;
 
 // Content Box 3
 boxContent.cont3.en = `
@@ -1219,7 +1219,7 @@ boxContent.cont3.en = `
   methodologies applied to product development.
 </p>
 </section>
-`
+`;
 boxContent.cont3.fr = `
 <header>
 <h2>Expérience</h2>
@@ -1337,7 +1337,7 @@ boxContent.cont3.fr = `
   méthodologies de productivité appliquées au développement de produits.
 </p>
 </section>
-`
+`;
 boxContent.cont3.pt = `
 <header>
 <h2>Experiência</h2>
@@ -1452,7 +1452,7 @@ boxContent.cont3.pt = `
   produtividade aplicadas ao desenvolvimento de produtos.
 </p>
 </section>
-`
+`;
 
 // Content Box 4
 boxContent.cont4.en = `
@@ -1544,7 +1544,7 @@ boxContent.cont4.en = `
   </div>
   <p>Cadritech</p>
 </section>
-`
+`;
 boxContent.cont4.fr = `
 <header>
 <h2>Éducation</h2>
@@ -1682,7 +1682,7 @@ boxContent.cont4.fr = `
 </div>
 <p>Cadritech</p>
 </section>
-`
+`;
 boxContent.cont4.pt = `
 <header>
 <h2>Educação</h2>
@@ -1822,7 +1822,7 @@ boxContent.cont4.pt = `
 </div>
 <p>Cadritech</p>
 </section>
-`
+`;
 
 // Content Box 5
 boxContent.cont5.en = `
@@ -2253,7 +2253,7 @@ boxContent.cont5.en = `
   </div>
 </div>
 </section>
-`
+`;
 boxContent.cont5.fr = `
 <header>
 <h2>Projets</h2>
@@ -2682,7 +2682,7 @@ boxContent.cont5.fr = `
   </div>
 </div>
 </section>
-`
+`;
 boxContent.cont5.pt = `
 <header>
 <h2>Projetos</h2>
@@ -3111,7 +3111,7 @@ boxContent.cont5.pt = `
   </div>
 </div>
 </section>
-`
+`;
 
 // Content Box 6
 boxContent.cont6.en = `
@@ -3167,7 +3167,7 @@ boxContent.cont6.en = `
 </form>
 <p></p>
 </section>
-`
+`;
 boxContent.cont6.fr = `
 <header>
 <h2>Contact</h2>
@@ -3221,7 +3221,7 @@ boxContent.cont6.fr = `
 </form>
 <p></p>
 </section>
-`
+`;
 boxContent.cont6.pt = `
 <header>
 <h2>Contact</h2>
@@ -3275,7 +3275,7 @@ boxContent.cont6.pt = `
 </form>
 <p></p>
 </section>
-`
+`;
 
 // Export
-export {boxContent}
+export { boxContent };
