@@ -151,6 +151,7 @@ boxContent.cont1.pt = `
 </p>
 </section>
 `;
+
 // Content Box 2
 boxContent.cont2.en = `
 <header>
@@ -1862,6 +1863,21 @@ boxContent.cont5.en = `
     ></a>
     </div>
       <div class="project-title">Unesco Heritage Sites</div>
+      <div class="year">2022</div>
+    </div>
+    <div class="project-box">
+    <div class="icons">
+    <a
+    target="_blank"
+    rel="external"
+    href="https://github.com/aleitaosantos/poppop"
+    ><i class="fa-brands fa-github"></i
+    ></a>
+      <a target="_blank" rel="external" href="https://poppop.netlify.app/"
+      ><i class="fa-solid fa-up-right-from-square"></i
+    ></a>
+    </div>
+      <div class="project-title">Pop-Pop Game</div>
       <div class="year">2022</div>
     </div>
     <div class="project-box">
